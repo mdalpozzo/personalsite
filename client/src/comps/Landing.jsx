@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import {} from '../actions/actions';
-// import ControlledCarousel from './banners/ControlledCarousel.jsx';
-import TextFieldGroup from './common/TextFieldGroup.jsx';
-import { getProfileByTool, getAllLenders } from '../actions/profileActions';
 
 class Landing extends Component {
   constructor() {
