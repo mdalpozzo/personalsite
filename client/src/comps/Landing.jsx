@@ -8,10 +8,6 @@ class Landing extends Component {
   constructor() {
     super();
     this.state = {
-      query: '',
-      location: '',
-      results: '',
-      errors: {},
     };
   }
 
@@ -23,68 +19,68 @@ class Landing extends Component {
         <div id="banner1-bg">
           <div className="leads">
             <h1>MARLIN DALPOZZO</h1>
-            <h2>Software Engineer</h2>
+            <h2>Full-Stack Software Engineer</h2>
           </div>
           <img src="images/mypictransparent.png" />
         </div>
         <div className="attributes">
-          <div className="frontend">
+          <div className="frontend skill-section">
             <h3>Front-End</h3>
             <div className="frontendstuff">
               <div className="javascript">
-                <img src="images/javascript.png" />
+                <img className="skill-img" src="images/javascript.png" />
+                <p className="skill-info">JavaScript (ES6)</p>
               </div>
-              <p className="skill-info">JavaScript (ES6)</p>
               <div className="react">
-                <img src="images/react.png" />
+                <img className="skill-img" src="images/react.png" />
+                <p className="skill-info">React</p>
               </div>
-              <p className="skill-info">React</p>
               <div className="redux">
-                <img src="images/redux.png" />
+                <img className="skill-img" src="images/redux.png" />
+                <p className="skill-info">Redux</p>
               </div>
-              <p className="skill-info">Redux</p>
               <div className="html">
-                <img src="images/html.png" />
+                <img className="skill-img" src="images/html.png" />
+                <p className="skill-info">HTML5</p>
               </div>
-              <p className="skill-info">HTML5</p>
               <div className="css">
-                <img src="images/css.png" />
+                <img className="skill-img" src="images/css.png" />
+                <p className="skill-info">CSS</p>
               </div>
-              <p className="skill-info">CSS</p>
             </div>
           </div>
-          <div className="backend">
+          <div className="backend skill-section">
             <h3>Back-End</h3>
             <div className="backendstuff">
               <div className="node">
-                <img src="images/node.png" />
+                <img className="skill-img" src="images/node.png" />
+                <p className="skill-info">Node.js</p>
               </div>
-              <p className="skill-info">Node.js</p>
               <div className="mongo">
-                <img src="images/mongo.png" />
+                <img className="skill-img" src="images/mongo.png" />
+                <p className="skill-info">NoSQL Databases</p>
               </div>
-              <p className="skill-info">NoSQL Databases</p>
               <div className="sql">
-                <img src="images/sql.png" />
+                <img className="skill-img" src="images/sql.png" />
+                <p className="skill-info">SQL Databases</p>
               </div>
-            <p className="skill-info">SQL Databases</p>
             </div>
           </div>
-          <div className="three">
+          <div className="tools skill-section">
             <h3>Tools/Deployment/Testing</h3>
             <div className="otherstuff">
               <div className="git">
-                <img src="images/git.png" />
+                <img className="skill-img" src="images/git.png" />
+                <p className="skill-info">Git</p>
               </div>
-              <p className="skill-info">Git</p>
               <div className="github">
-                <img src="images/github.png" />
+                <img className="skill-img" src="images/github.png" />
+                <p className="skill-info">Github</p>
               </div>
-              <p className="skill-info">Github</p>
               <div className="docker">
-                <img src="images/docker.png" />
+                <img className="skill-img" src="images/docker.png" />
+                <p className="skill-info">Docker</p>
               </div>
-              <p className="skill-info">Docker</p>
             </div>
           </div>
         </div>

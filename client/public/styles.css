@@ -1,159 +1,340 @@
+.skill-section {
+  width: 100%;
+  background-color: white;
+  font-family: "Arvo", serif;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* MOBILE FIRST (iphone5) ----------- */
 #app, html, body, .main-wrapper {
   height: 100%;
+  width: 100%;
   background-color: #fffafb;
 }
 
-.landing {
-  height: 100%;
+/* navbar */
+a {
+  color: #4C9CF1;
+  text-decoration: none;
+  font-weight: bold;
 }
-.landing #banner1-bg {
-  background-color: #016392;
+
+a:hover {
+  color: #444;
+}
+
+.navbar-container {
+  background: #fff;
   width: 100%;
-  height: 35rem;
-  position: relative;
+  height: 76px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-bottom: 4px solid #4C9CF1;
+  z-index: 100;
 }
-.landing #banner1-bg .leads {
-  width: 60%;
+
+nav {
+  float: right;
+  padding: 20px;
+}
+
+#logo {
+  margin: 20px;
+  float: left;
+  width: 200px;
+  height: 40px;
+  background: url("") no-repeat center;
+  display: block;
+}
+
+#menu-icon {
+  display: hidden;
+  width: 40px;
+  height: 40px;
+  background: #4C8FEC url(../img/menu-icon.png) center;
+}
+
+a:hover#menu-icon {
+  background-color: #444;
+  border-radius: 4px 4px 0 0;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+  float: left;
+  padding: 10px;
+}
+
+.current {
+  color: #2262AD;
+}
+
+/* ---- */
+#banner1-bg {
+  height: 20rem;
+  position: relative;
+  background-color: #016392;
+}
+#banner1-bg .leads {
   color: #e88224;
   display: inline-block;
-  margin-top: 10rem;
-  margin-left: 5rem;
+  text-align: center;
+  width: 100%;
 }
-.landing #banner1-bg .leads h1 {
+#banner1-bg .leads h1 {
   font-family: "Archivo", sans-serif;
-  font-size: 72px;
+  font-size: 26px;
+  margin-top: 4rem;
 }
-.landing #banner1-bg .leads h2 {
-  margin-top: 25px;
+#banner1-bg .leads h2 {
   font-family: "Arvo", serif;
-  font-size: 50px;
+  font-size: 18px;
   text-decoration: underline overline;
+  margin-top: 4rem;
+  margin-right: 10rem;
 }
-.landing #banner1-bg img {
-  width: 600px;
+#banner1-bg img {
+  width: 15rem;
+  right: 0.01rem;
   position: absolute;
-  right: -5%;
   display: inline-block;
   bottom: 0;
 }
-.landing .attributes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 10px;
-  margin: 10px 10px 10px 10px;
+
+.attributes .frontend {
+  background-color: #ffe7e7;
+}
+.attributes .backend {
+  background-color: #c3ecff;
+  padding-bottom: 5px;
+}
+.attributes .tools {
+  background-color: #f5f6ff;
+}
+.attributes .tools h3 {
+  font-size: 20px;
+}
+.attributes h3 {
   text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
-.landing .attributes .frontend {
-  grid-row: 1;
-  font-family: "Arvo", serif;
-  background-color: white;
-  padding-top: 10px;
-  box-shadow: inset 0 0 5px #000000;
-}
-.landing .attributes .backend {
-  grid-row: 1;
-  background-color: white;
-  font-family: "Arvo", serif;
-  padding-top: 10px;
-  box-shadow: inset 0 0 5px #000000;
-}
-.landing .attributes .three {
-  grid-row: 1;
-  background-color: white;
-  font-family: "Arvo", serif;
-  padding-top: 10px;
-  box-shadow: inset 0 0 5px #000000;
-}
-.landing .attributes .three h3 {
-  font-size: 22px;
+
+.skill-img {
+  height: 50px;
+  margin: auto;
 }
 
 .frontendstuff {
   display: grid;
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: 70px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px;
 }
 .frontendstuff .react {
   grid-row: 1;
 }
-.frontendstuff .react img {
-  height: 70px;
-  margin: auto;
-}
 .frontendstuff .javascript {
-  grid-row: 2;
-}
-.frontendstuff .javascript img {
-  height: 70px;
+  grid-row: 1;
 }
 .frontendstuff .redux {
-  grid-row: 3;
-}
-.frontendstuff .redux img {
-  height: 70px;
+  grid-row: 1;
 }
 .frontendstuff .html {
-  grid-row: 4;
-}
-.frontendstuff .html img {
-  height: 70px;
+  grid-row: 2;
 }
 .frontendstuff .css {
-  grid-row: 5;
-}
-.frontendstuff .css img {
-  height: 70px;
+  grid-row: 2;
 }
 
 .backendstuff {
   display: grid;
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: 70px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px;
 }
 .backendstuff .node {
   grid-row: 1;
 }
-.backendstuff .node img {
-  height: 70px;
-}
 .backendstuff .mongo {
-  grid-row: 2;
-}
-.backendstuff .mongo img {
-  height: 70px;
+  grid-row: 1;
 }
 .backendstuff .sql {
-  grid-row: 3;
-}
-.backendstuff .sql img {
-  height: 70px;
+  grid-row: 1;
 }
 
 .otherstuff {
   display: grid;
-  grid-template-columns: 100px 1fr;
-  grid-template-rows: 70px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px;
 }
-.otherstuff .git img {
+.otherstuff .git {
   grid-row: 1;
-  height: 70px;
 }
 .otherstuff .github {
-  grid-row: 2;
-}
-.otherstuff .github img {
-  height: 70px;
+  grid-row: 1;
 }
 .otherstuff .docker {
-  grid-row: 3;
-}
-.otherstuff .docker img {
-  height: 70px;
+  grid-row: 1;
 }
 
-.skill-info {
-  text-align: left;
-  line-height: 70px;
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  /* Styles */
+}
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width: 321px) {
+  /* Styles */
+}
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  /* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen and (min-width: 1224px) {
+  .skill-section {
+    box-shadow: inset 0 0 5px #000000;
+  }
+
+  .landing #banner1-bg {
+    height: 35rem;
+    position: relative;
+  }
+  .landing #banner1-bg .leads {
+    width: 60%;
+    color: #e88224;
+    display: inline-block;
+    margin-top: 10rem;
+    margin-left: 5rem;
+  }
+  .landing #banner1-bg .leads h1 {
+    font-size: 72px;
+  }
+  .landing #banner1-bg .leads h2 {
+    margin-top: 25px;
+    font-size: 50px;
+  }
+  .landing #banner1-bg img {
+    width: 600px;
+    position: absolute;
+    right: -5%;
+    display: inline-block;
+    bottom: 0;
+  }
+  .landing .attributes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 10px;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+  }
+  .landing .attributes .frontend {
+    grid-row: 1;
+    padding-top: 10px;
+  }
+  .landing .attributes .backend {
+    grid-row: 1;
+    padding-top: 10px;
+  }
+  .landing .attributes .tools {
+    grid-row: 1;
+    padding-top: 10px;
+  }
+  .landing .attributes .tools h3 {
+    font-size: 22px;
+  }
+
+  .frontendstuff {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 70px;
+  }
+  .frontendstuff .react {
+    grid-row: 1;
+  }
+  .frontendstuff .react img {
+    height: 70px;
+    margin: auto;
+  }
+  .frontendstuff .javascript {
+    grid-row: 2;
+  }
+  .frontendstuff .javascript img {
+    height: 70px;
+  }
+  .frontendstuff .redux {
+    grid-row: 3;
+  }
+  .frontendstuff .redux img {
+    height: 100px;
+  }
+  .frontendstuff .html {
+    grid-row: 4;
+  }
+  .frontendstuff .html img {
+    height: 100px;
+  }
+  .frontendstuff .css {
+    grid-row: 5;
+  }
+  .frontendstuff .css img {
+    height: 100px;
+  }
+
+  .backendstuff {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px;
+  }
+  .backendstuff .node {
+    grid-row: 1;
+  }
+  .backendstuff .node img {
+    height: 100px;
+  }
+  .backendstuff .mongo {
+    grid-row: 2;
+  }
+  .backendstuff .mongo img {
+    height: 100px;
+  }
+  .backendstuff .sql {
+    grid-row: 3;
+  }
+  .backendstuff .sql img {
+    height: 100px;
+  }
+
+  .otherstuff {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: 100px;
+  }
+  .otherstuff .git img {
+    grid-row: 1;
+    height: 100px;
+  }
+  .otherstuff .github {
+    grid-row: 2;
+  }
+  .otherstuff .github img {
+    height: 100px;
+  }
+  .otherstuff .docker {
+    grid-row: 3;
+  }
+  .otherstuff .docker img {
+    height: 100px;
+  }
+
+  .skill-info {
+    text-align: left;
+    line-height: 100px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

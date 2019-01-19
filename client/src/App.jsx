@@ -7,6 +7,7 @@ import { connect, Provider } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import Landing from './comps/Landing.jsx';
+import NavBar from './comps/NavBar.jsx';
 
 import * as actions from './actions/actions';
 import store from './store/store';
@@ -20,6 +21,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="main-wrapper">
+          {/* <NavBar /> */}
           <Route exact path="/" component={Landing} />
         </div>
       </Router>

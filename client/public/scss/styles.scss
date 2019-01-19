@@ -4,204 +4,412 @@ $colors: (
 );
 
 $skills: (
-  rowheight: 70px,
+  rowheight: 100px,
+  rowheightdesktop: 70px,
 );
 
+.skill-section {
+  width: 100%;
+  background-color: white;
+  font-family: 'Arvo', serif;
+  padding-top: 10px;
+  text-align: center;
+}
+
+/* MOBILE FIRST (iphone5) ----------- */
 #app, html, body, .main-wrapper {
   height: 100%;
+  width: 100%;
   background-color: map-get($colors, primary);
 }
 
-.landing {
-  height: 100%;
-  
-  #banner1-bg {
-    // clip-path: polygon(60% 0, 100% 0%, 100% 100%, 60% 100%);
-    background-color: map-get($colors, accent);
-    width: 100%;
-    height: 35rem;
-    position: relative;
-    // z-index: -1;
+/* navbar */
+a {
+	color: #4C9CF1;
+	text-decoration: none;
+	font-weight: bold;
+}
 
-    .leads {
-      width: 60%;
-      color: #e88224;
-      // z-index: -1;
-      display: inline-block;
-      margin-top: 10rem;
-      margin-left: 5rem;
+a:hover {
+	color: #444;
+}
 
-      h1 {
-        font-family: 'Archivo', sans-serif;
-        font-size: 72px;
-      }
+.navbar-container {
+  background: #fff;
+	width: 100%;
+	height: 76px;
+	position: fixed;
+	top: 0;
+	left: 0;
+	border-bottom: 4px solid #4C9CF1;
+	z-index: 100;
+}
 
-      h2 {
-        margin-top: 25px;
-        font-family: 'Arvo', serif;
-        font-size: 50px;
-        text-decoration: underline overline;
-      }
-    }
+nav {
+  float: right;
+	padding: 20px;
+}
 
-    img {
-      width: 600px;
-      position: absolute;
-      right: -5%;
-      display: inline-block;
-      bottom: 0;
-    }
-  }
+#logo{
+	margin: 20px;
+	float: left;
+	width: 200px;
+	height: 40px;
+	background: url('') no-repeat center;
+	display: block;
+}
 
-  .attributes {
-    display: grid;
-    // min-height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: 10px;
-    margin: 10px 10px 10px 10px;
+#menu-icon {
+	display: hidden;
+	width: 40px;
+	height: 40px;
+	background: #4C8FEC url(../img/menu-icon.png) center;
+}
+
+a:hover#menu-icon {
+	background-color: #444;
+	border-radius: 4px 4px 0 0;
+}
+
+ul {
+	list-style: none;
+}
+
+li {
+	display: inline-block;
+	float: left;
+	padding: 10px;
+}
+
+.current {
+	color: #2262AD;
+}
+
+/* ---- */
+
+#banner1-bg {
+  height: 20rem;
+  position: relative;
+  background-color: map-get($colors, accent);
+
+  .leads {
+    color: #e88224;
+    display: inline-block;
     text-align: center;
+    width: 100%;
 
-    .frontend {
-      grid-row: 1;
-      font-family: 'Arvo', serif;
-      background-color: white;
-      padding-top: 10px;
-      box-shadow: inset 0 0 5px #000000;
+    h1 {
+      font-family: 'Archivo', sans-serif;
+      font-size: 26px;
+      margin-top: 4rem;
     }
 
-    .backend {
-      grid-row: 1;
-      background-color: white;
+    h2 {
       font-family: 'Arvo', serif;
-      padding-top: 10px;
-      box-shadow: inset 0 0 5px #000000;
-    }
-
-    .three {
-      grid-row: 1;
-      background-color: white;
-      font-family: 'Arvo', serif;
-      padding-top: 10px;
-      box-shadow: inset 0 0 5px #000000;
-
-      h3 {
-        font-size: 22px;
-      }
+      font-size: 18px;
+      text-decoration: underline overline;
+      margin-top: 4rem;
+      margin-right: 10rem;
     }
   }
+
+  img {
+    width: 15rem;
+    right: .01rem;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+  }
+}
+
+.attributes {
+  .frontend {
+    background-color: #ffe7e7;
+  }
+
+  .backend {
+    background-color: #c3ecff;
+    padding-bottom: 5px;
+  }
+
+  .tools {
+    background-color: #f5f6ff;
+
+    h3 {
+      font-size: 20px;
+    }
+  }
+
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+.skill-img {
+  height: 50px;
+  margin: auto;
 }
 
 .frontendstuff {
   display: grid;
-  // min-height: 100%;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: map-get($skills, rowheight);
 
   .react {
     grid-row: 1;
-
-    img {
-      height: map-get($skills, rowheight);
-      margin: auto;
-    }
   }
 
   .javascript {
-    grid-row: 2;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 1;
   }
 
   .redux {
-    grid-row: 3;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 1;
   }
 
   .html {
-    grid-row: 4;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 2;
   }
 
   .css {
-    grid-row: 5;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 2;
   }
 }
 
 .backendstuff {
   display: grid;
-  // min-height: 100%;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: map-get($skills, rowheight);
 
   .node {
     grid-row: 1;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
   }
 
   .mongo {
-    grid-row: 2;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 1;
   }
 
   .sql {
-    grid-row: 3;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 1;
   }
 }
 
 .otherstuff {
   display: grid;
-  // min-height: 100%;
-  grid-template-columns: 100px 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: map-get($skills, rowheight);
 
   .git {
-
-    img {
-      grid-row: 1;
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 1;
   }
 
   .github {
-    grid-row: 2;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 1;
   }
 
   .docker {
-    grid-row: 3;
-
-    img {
-      height: map-get($skills, rowheight);
-    }
+    grid-row: 1;
   }
 }
 
-.skill-info {
-  text-align: left;
-    line-height: map-get($skills, rowheight);
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+  }
+  
+  /* Smartphones (landscape) ----------- */
+  @media only screen and (min-width : 321px) {
+  /* Styles */
+  }
+  
+  /* Smartphones (portrait) ----------- */
+  @media only screen and (max-width : 320px) {
+  /* Styles */
+  }
+
+  /* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+  
+  .skill-section {
+  box-shadow: inset 0 0 5px #000000;
+
+  }
+  
+
+  .landing {
+    #banner1-bg {
+      height: 35rem;
+      position: relative;
+  
+      .leads {
+        width: 60%;
+        color: #e88224;
+        display: inline-block;
+        margin-top: 10rem;
+        margin-left: 5rem;
+  
+        h1 {
+          font-size: 72px;
+        }
+  
+        h2 {
+          margin-top: 25px;
+          font-size: 50px;
+        }
+      }
+  
+      img {
+        width: 600px;
+        position: absolute;
+        right: -5%;
+        display: inline-block;
+        bottom: 0;
+      }
+    }
+  
+    .attributes {
+      display: grid;
+      // min-height: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 10px;
+      margin: 10px 10px 10px 10px;
+      text-align: center;
+  
+      .frontend {
+        grid-row: 1;
+        padding-top: 10px;
+      }
+  
+      .backend {
+        grid-row: 1;
+        padding-top: 10px;
+      }
+  
+      .tools {
+        grid-row: 1;
+        padding-top: 10px;
+  
+        h3 {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  
+  .frontendstuff {
+    display: grid;
+    // min-height: 100%;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: map-get($skills, rowheightdesktop);
+  
+    .react {
+      grid-row: 1;
+  
+      img {
+        height: map-get($skills, rowheightdesktop);
+        margin: auto;
+      }
+    }
+  
+    .javascript {
+      grid-row: 2;
+  
+      img {
+        height: map-get($skills, rowheightdesktop);
+      }
+    }
+  
+    .redux {
+      grid-row: 3;
+  
+      img {
+        height: map-get($skills, rowheight);
+      }
+    }
+  
+    .html {
+      grid-row: 4;
+  
+      img {
+        height: map-get($skills, rowheight);
+      }
+    }
+  
+    .css {
+      grid-row: 5;
+  
+      img {
+        height: map-get($skills, rowheight);
+      }
+    }
+  }
+  
+  .backendstuff {
+    display: grid;
+    // min-height: 100%;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: map-get($skills, rowheight);
+  
+    .node {
+      grid-row: 1;
+  
+      img {
+        height: map-get($skills, rowheight);
+      }
+    }
+  
+    .mongo {
+      grid-row: 2;
+  
+      img {
+        height: map-get($skills, rowheight);
+      }
+    }
+  
+    .sql {
+      grid-row: 3;
+  
+      img {
+        height: map-get($skills, rowheight);
+      }
+    }
+  }
+  
+  .otherstuff {
+    display: grid;
+    // min-height: 100%;
+    grid-template-columns: 100px 1fr;
+    grid-template-rows: map-get($skills, rowheight);
+  
+    .git {
+  
+      img {
+        grid-row: 1;
+        height: map-get($skills, rowheight);
+      }
+    }
+  
+    .github {
+      grid-row: 2;
+  
+      img {
+        height: map-get($skills, rowheight);
+      }
+    }
+  
+    .docker {
+      grid-row: 3;
+  
+      img {
+        height: map-get($skills, rowheight);
+      }
+    }
+  }
+  
+  .skill-info {
+    text-align: left;
+      line-height: map-get($skills, rowheight);
+  }
 }
