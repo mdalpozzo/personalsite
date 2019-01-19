@@ -1,249 +1,147 @@
-.card {
-  color: #000;
+#app, html, body, .main-wrapper {
+  height: 100%;
+  background-color: #fffafb;
 }
 
-.dropzone {
-  height: 50px;
-  border: 1px dashed gray;
-  margin-bottom: 10px;
-}
-
-.name {
-  color: #7e4fff;
-}
-
-.toolImgUploadThumb {
-  height: 150px;
-  width: 150px;
-  overflow: hidden;
-  display: inline-block;
-  margin: 10px;
-}
-
-/* LANDING PAGE */
 .landing {
-  background-color: rgba(105, 105, 105, 0.671);
-  position: relative;
   height: 100%;
-  top: -55.4px;
 }
-
-.landing .container-fluid {
-  background: url('./images/tools2small.jpg') no-repeat;
-  background-size: cover;
-  height: 48.78rem;
-  color: rgb(255, 255, 255);
-}
-
-.landing .container-fluid .row {
-  background-color: rgba(0, 0, 0, 0.425);
-}
-
-.landing-inner h1 {
-  font-family: 'Roboto Condensed', sans-serif;
-  padding-top: 5rem;
+.landing #banner1-bg {
+  background-color: #016392;
   width: 100%;
-}
-
-.landing-inner p {
-  width: 100%;
-}
-
-.landing-inner form {
-  width: 100%;
-}
-
-.main-search {
-  margin: auto;
-  padding-top: 2rem;
-}
-
-.main-search .btn {
-  width: 10rem;
-}
-/* ======================= */
-
-/* LENDERS PAGE */
-.lenders {
-  background-color: rgba(105, 105, 105, 0.671);
+  height: 35rem;
   position: relative;
-  height: 100%;
-  top: -55.4px;
 }
-
-.lenders .container-fluid {
-  background: url('./images/tools2small.jpg') no-repeat;
-  background-size: cover;
-  height: 48.78rem;
-  color: rgb(255, 255, 255);
+.landing #banner1-bg .leads {
+  width: 60%;
+  color: #e88224;
+  display: inline-block;
+  margin-top: 10rem;
+  margin-left: 5rem;
 }
-
-.lenders .container-fluid .row {
-  /* background-color: rgba(0, 0, 0, 0.425); */
+.landing #banner1-bg .leads h1 {
+  font-family: "Archivo", sans-serif;
+  font-size: 72px;
 }
-
-.lenders .card {
-  height: 5rem;
-  width: 30rem;
-  padding: 0;
+.landing #banner1-bg .leads h2 {
+  margin-top: 25px;
+  font-family: "Arvo", serif;
+  font-size: 50px;
+  text-decoration: underline overline;
 }
-
-.lender .card.row {
-  margin-top: 0;
-}
-
-.lenders .card h3 {
-  font-size: 1.2rem;
-  font-weight: bold;
-  margin: 0;
-  width: 7rem;
-}
-
-.lenders .card .status {
-  font-size: 0.75rem;
-  margin: 0;
-  width: 4rem;
-}
-
-.lenders .card .location {
-  font-size: 0.75rem;
-  margin: 0;
-  width: 7rem;
-}
-
-.lenders .card img {
-  height: 4rem;
-  width: 4rem;
-}
-/* ======================= */
-
-/* SIGNUP PAGE */
-.register {
-  background-color: rgba(105, 105, 105, 0.671);
-  position: relative;
-  height: 100%;
-  top: -55.4px;
-}
-
-.register .container-fluid {
-  background: url('./images/tools2small.jpg') no-repeat;
-  background-size: cover;
-  height: 48.78rem;
-  color: rgb(255, 255, 255);
-}
-
-.main-input {
-  margin: auto;
-  padding-top: 3rem;
-}
-
-.register .btn {
-  width: 10rem;
-}
-/* ======================= */
-
-/* LOGIN PAGE */
-.login {
-  background-color: rgba(105, 105, 105, 0.671);
-  position: relative;
-  height: 100%;
-  top: -55.4px;
-}
-
-.login .container-fluid {
-  background: url('./images/tools2small.jpg') no-repeat;
-  background-size: cover;
-  height: 48.78rem;
-  color: rgb(255, 255, 255);
-}
-.login-inner {
-}
-/* ======================= */
-
-/* CREATE PROFILE PAGE */
-.create-profile .container-fluid {
-  background: url('./images/tools2small.jpg') no-repeat;
-  background-size: cover;
-  color: rgb(255, 255, 255);
-}
-
-.create-profile .container-fluid .row {
-  background-color: rgba(0, 0, 0, 0.425);
-}
-
-.create-profile h1,
-.create-profile p {
-  margin: auto;
-}
-/* ======================= */
-
-/* DASHBOARD PAGE */
-.dashboard .container-fluid {
-  background: url('./images/tools2small.jpg') no-repeat;
-  background-size: cover;
-  height: 48.78rem;
-  color: rgb(255, 255, 255);
-}
-
-.dashboard .container-fluid h1 {
-  margin-bottom: 7rem;
-}
-/* ======================= */
-
-.main-wrapper {
-  height: 48.78rem;
-}
-
-/* ======================= */
-.navbar {
-  background-color: rgba(0, 0, 0, 0.308);
-  z-index: 9;
-}
-/* ======================= */
-
-/* ======================= */
-footer {
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.308);
-  z-index: 9;
-  color: rgba(209, 209, 209, 0.616);
-}
-/* ======================= */
-
-img {
-  width: 100%;
-}
-
-.carousel-item .active {
-  width: 100%;
-}
-
-#carouselExampleControls {
-  width: 100%;
-}
-
-.dark-overlay {
-  background-color: rgba(0, 0, 0, 0.7);
+.landing #banner1-bg img {
+  width: 600px;
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+  right: -5%;
+  display: inline-block;
+  bottom: 0;
+}
+.landing .attributes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  margin: 10px 10px 0 10px;
+  text-align: center;
+}
+.landing .attributes .frontend {
+  grid-row: 1;
+  font-family: "Arvo", serif;
+  background-color: white;
+  padding-top: 10px;
+  box-shadow: inset 0 0 5px #000000;
+}
+.landing .attributes .backend {
+  grid-row: 1;
+  background-color: white;
+  font-family: "Arvo", serif;
+  padding-top: 10px;
+  box-shadow: inset 0 0 5px #000000;
+}
+.landing .attributes .three {
+  grid-row: 1;
+  background-color: white;
+  font-family: "Arvo", serif;
+  padding-top: 10px;
+  box-shadow: inset 0 0 5px #000000;
+}
+.landing .attributes .three h3 {
+  font-size: 22px;
 }
 
-.light-overlay {
-  background-color: rgba(255, 236, 129, 0.7);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+.frontendstuff {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 70px;
+}
+.frontendstuff .react {
+  grid-row: 1;
+}
+.frontendstuff .react img {
+  height: 70px;
+  margin: auto;
+}
+.frontendstuff .javascript {
+  grid-row: 2;
+}
+.frontendstuff .javascript img {
+  height: 70px;
+}
+.frontendstuff .redux {
+  grid-row: 3;
+}
+.frontendstuff .redux img {
+  height: 70px;
 }
 
-.card-form {
-  opacity: 0.9;
+.backendstuff {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 70px;
+}
+.backendstuff .node {
+  grid-row: 1;
+}
+.backendstuff .node img {
+  height: 70px;
+}
+.backendstuff .mongo {
+  grid-row: 2;
+}
+.backendstuff .mongo img {
+  height: 70px;
+}
+.backendstuff .sql {
+  grid-row: 3;
+}
+.backendstuff .sql img {
+  height: 70px;
 }
 
-.form-control::placeholder {
-  color: #bbb !important;
+.otherstuff {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  grid-template-rows: 70px;
 }
+.otherstuff .git img {
+  grid-row: 1;
+  height: 70px;
+}
+.otherstuff .github {
+  grid-row: 2;
+}
+.otherstuff .github img {
+  height: 70px;
+}
+.otherstuff .docker {
+  grid-row: 3;
+}
+.otherstuff .docker img {
+  height: 70px;
+}
+
+.skill-info {
+  text-align: left;
+  line-height: 70px;
+}
+
+/*# sourceMappingURL=styles.css.map */

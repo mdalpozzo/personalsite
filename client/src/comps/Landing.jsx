@@ -19,72 +19,68 @@ class Landing extends Component {
     };
   }
 
-  componentWillMount() {}
-
-  componentDidMount() {}
-
-  componentWillReceiveProps(nextProps) {
-    // maybe instead if areSearchResultsStale false then show results page/lenders results
-    if (nextProps.profile.searchStarted) {
-      this.props.history.push('/lenders');
-    }
-  }
-
-  onChange = e => {
-    this.setState({ [e.target.name]: e.target.value });
-  };
-
-  onSubmit = e => {
-    e.preventDefault();
-    if (this.state.query === '') {
-      this.props.getAllLenders();
-    } else {
-      this.props.getProfileByTool(this.state.query, this.state.location);
-    }
-  };
-
-  seeAll = () => {
-    this.props.getAllLenders();
-  };
 
   render() {
-    const { errors } = this.state;
 
     return (
       <div className="landing">
-        <div className="container-fluid">
-          <div className="row">
-            <div className="container-fluid landing-inner">
-              <div className="col-lg-6 main-search">
-                <h1 className="display-3 text-center">Tool Share</h1>
-                <p className="lead text-center">You need it, your neighbor's got it</p>
-                {/* pull this out into a search component.  create a search page with lenders comonent and search comp */}
-                <form className="text-center" onSubmit={this.onSubmit}>
-                  <TextFieldGroup
-                    placeholder="What do you need?"
-                    name="query"
-                    type="text"
-                    value={this.state.query}
-                    onChange={this.onChange}
-                    error={errors.email}
-                  />
-                  <TextFieldGroup
-                    placeholder="Where are you?"
-                    name="location"
-                    type="text"
-                    value={this.state.location}
-                    onChange={this.onChange}
-                    error={errors.password}
-                  />
-                  <input type="submit" value="Search" className="btn btn-info" />
-                </form>
-                <input
-                  value="See All Lenders"
-                  type="button"
-                  onClick={this.seeAll}
-                  className="btn btn-info"
-                />
+        <div id="banner1-bg">
+          <div className="leads">
+            <h1>MARLIN DALPOZZO</h1>
+            <h2>Software Engineer</h2>
+          </div>
+          <img src="images/mypictransparent.png" />
+        </div>
+        <div className="attributes">
+          <div className="frontend">
+            <h3>Front-End</h3>
+            <div className="frontendstuff">
+              <div className="javascript">
+                <img src="images/javascript.png" />
               </div>
+              <p className="skill-info">JavaScript (ES6)</p>
+              <div className="react">
+                <img src="images/react.png" />
+              </div>
+              <p className="skill-info">React</p>
+              <div className="redux">
+                <img src="images/redux.png" />
+              </div>
+              <p className="skill-info">Redux</p>
+            </div>
+          </div>
+          <div className="backend">
+            <h3>Back-End</h3>
+            <div className="backendstuff">
+              <div className="node">
+                <img src="images/node.png" />
+              </div>
+              <p className="skill-info">Node.js</p>
+              <div className="mongo">
+                <img src="images/mongo.png" />
+              </div>
+              <p className="skill-info">NoSQL Databases</p>
+              <div className="sql">
+                <img src="images/sql.png" />
+              </div>
+            <p className="skill-info">SQL Databases</p>
+            </div>
+          </div>
+          <div className="three">
+            <h3>Tools/Deployment/Testing</h3>
+            <div className="otherstuff">
+              <div className="git">
+                <img src="images/git.png" />
+              </div>
+              <p className="skill-info">Git</p>
+              <div className="github">
+                <img src="images/github.png" />
+              </div>
+              <p className="skill-info">Github</p>
+              <div className="docker">
+                <img src="images/docker.png" />
+              </div>
+              <p className="skill-info">Docker</p>
             </div>
           </div>
         </div>
@@ -93,24 +89,19 @@ class Landing extends Component {
   }
 }
 
-Landing.propTypes = {
-  getProfileByTool: PropTypes.func.isRequired,
-  getAllLenders: PropTypes.func.isRequired,
-  // errors: PropTypes.object.isRequired,
-};
+// Landing.propTypes = {
+//   getProfileByTool: PropTypes.func.isRequired,
+//   getAllLenders: PropTypes.func.isRequired,
+//   // errors: PropTypes.object.isRequired,
+// };
 
 const mapDispatchToProps = dispatch =>
   bindActionCreators(
-    {
-      getProfileByTool,
-      getAllLenders,
-    },
+    {},
     dispatch
   );
 
-const mapStateToProps = state => ({
-  profile: state.profile,
-});
+const mapStateToProps = state => ({});
 
 export default connect(
   mapStateToProps,
