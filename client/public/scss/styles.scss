@@ -100,11 +100,13 @@ a:hover {
   // overflow: visible;
   box-shadow: 0 1px 2px 0px black;
   z-index: 1;
+  text-align: center;
 
   h1 {
     font-size: 12px;
     width: 50%;
-    margin-top: 10px;
+    margin: 9px 0 0 5px;
+    text-align: left;
   }
 
   // a {
@@ -176,32 +178,56 @@ ul {
   }
 }
 
-button {
+// .bar1 {
+//   width: 35px;
+//   height: 5px;
+//   background-color: black;
+//   margin: 6px 0;
+// }
+
+// .bar2 {
+//   width: 35px;
+//   height: 5px;
+//   background-color: black;
+//   margin: 6px 0;
+// }
+
+// .bar3 {
+//   width: 35px;
+//   height: 5px;
+//   background-color: black;
+//   margin: 6px 0;
+// }
+
+.button {
   opacity: 0.6;
   background-color: transparent;
   position: relative;
-  float: right;
-  right: 20px;
+  // float: right;
+  // right: 20px;
+  top: 5px;
   z-index: 2;
-  top: 24px;
   border: none;
-  width: 30px;
-  height: 25px;
+  width: 60px;
+  height: 40px;
+  margin: 0 auto;
   outline: none;
   transition: opacity 0.1s ease-out;
   &:before {
     content: "";
     @include position-center;
-    right: auto;
     width: 100%;
     background: linear-gradient(
-      to bottom, 
-      $color, $color 20%, 
-      transparent 20%, transparent 40%, 
-      $color 40%, $color 60%, 
-      transparent 60%, transparent 80%, 
-      $color 80%, $color 100%
+      to bottom,
+      transparent, transparent 7.5%, 
+      $color 7.5%, $color 22.5%, 
+      transparent 22.5%, transparent 37.5%, 
+      $color 37.5%, $color 52.5%, 
+      transparent 52.5%, transparent 67.5%, 
+      $color 67.5%, $color 82.5%,
+      transparent 82.5%, transparent 100%,
     );
+    clip-path: circle(50% at 50% 50%);
     transition: opacity 0.1s ease-out,
                 width 0.1s 0.1s ease-out;
   }
@@ -211,7 +237,7 @@ button {
     color: white;
     position: absolute;
     top: 16px;
-    left: -4px;
+    left: 8px;
     font-family: Arial, sans-serif;
     font-size: 76px;
     line-height: 0;

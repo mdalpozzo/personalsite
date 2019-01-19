@@ -24,8 +24,14 @@ class Landing extends Component {
 
     return (
       <div className="navbar-container">
-          <button className="menu-toggle" onClick={this.onClick}></button>
+        <div>
           <h1>MARLIN DALPOZZO</h1>
+        </div>
+          <div className="button menu-toggle" onClick={this.onClick}>
+            {/* <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div> */}
+          </div>
         <nav>
           <a href="#" id="menu-icon"></a>
           <ul className="menu">
