@@ -350,15 +350,8 @@ ul.menu li:hover:after {
   bottom: 0;
 }
 
-.attributes .frontend {
-  background-color: #ffe7e7;
-}
 .attributes .backend {
-  background-color: #c3ecff;
   padding-bottom: 5px;
-}
-.attributes .tools {
-  background-color: #f5f6ff;
 }
 .attributes .tools h3 {
   font-size: 20px;
@@ -438,7 +431,7 @@ ul.menu li:hover:after {
   /* Styles */
 }
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1224px) {
+@media only screen and (min-width: 1140px) {
   .skill-section {
     box-shadow: inset 0 0 5px #000000;
   }
@@ -470,6 +463,7 @@ ul.menu li:hover:after {
   }
   .landing .attributes {
     display: grid;
+    min-height: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 10px;
     margin: 10px 10px 10px 10px;
@@ -493,39 +487,39 @@ ul.menu li:hover:after {
 
   .frontendstuff {
     display: grid;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: 70px;
+    min-height: 100%;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+  }
+  .frontendstuff .javascript {
+    grid-row: 1;
+  }
+  .frontendstuff .javascript img {
+    height: 60%;
   }
   .frontendstuff .react {
     grid-row: 1;
   }
   .frontendstuff .react img {
-    height: 70px;
-    margin: auto;
-  }
-  .frontendstuff .javascript {
-    grid-row: 2;
-  }
-  .frontendstuff .javascript img {
-    height: 70px;
+    height: 60%;
   }
   .frontendstuff .redux {
-    grid-row: 3;
+    grid-row: 1;
   }
   .frontendstuff .redux img {
-    height: 100px;
+    height: 60%;
   }
   .frontendstuff .html {
-    grid-row: 4;
+    grid-row: 2;
   }
   .frontendstuff .html img {
-    height: 100px;
+    height: 60%;
   }
   .frontendstuff .css {
-    grid-row: 5;
+    grid-row: 2;
   }
   .frontendstuff .css img {
-    height: 100px;
+    height: 60%;
   }
 
   .backendstuff {
@@ -537,19 +531,19 @@ ul.menu li:hover:after {
     grid-row: 1;
   }
   .backendstuff .node img {
-    height: 100px;
+    height: 60%;
   }
   .backendstuff .mongo {
-    grid-row: 2;
+    grid-row: 1;
   }
   .backendstuff .mongo img {
-    height: 100px;
+    height: 60%;
   }
   .backendstuff .sql {
-    grid-row: 3;
+    grid-row: 1;
   }
   .backendstuff .sql img {
-    height: 100px;
+    height: 60%;
   }
 
   .otherstuff {
@@ -557,26 +551,23 @@ ul.menu li:hover:after {
     grid-template-columns: 100px 1fr;
     grid-template-rows: 100px;
   }
-  .otherstuff .git img {
+  .otherstuff .git {
     grid-row: 1;
-    height: 100px;
+  }
+  .otherstuff .git img {
+    height: 60%;
   }
   .otherstuff .github {
-    grid-row: 2;
+    grid-row: 1;
   }
   .otherstuff .github img {
-    height: 100px;
+    height: 60%;
   }
   .otherstuff .docker {
-    grid-row: 3;
+    grid-row: 1;
   }
   .otherstuff .docker img {
-    height: 100px;
-  }
-
-  .skill-info {
-    text-align: left;
-    line-height: 100px;
+    height: 60%;
   }
 }
 
