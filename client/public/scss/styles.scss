@@ -121,6 +121,22 @@ $skills: (
       height: map-get($skills, rowheight);
     }
   }
+
+  .html {
+    grid-row: 4;
+
+    img {
+      height: map-get($skills, rowheight);
+    }
+  }
+
+  .css {
+    grid-row: 5;
+
+    img {
+      height: map-get($skills, rowheight);
+    }
+  }
 }
 
 .backendstuff {

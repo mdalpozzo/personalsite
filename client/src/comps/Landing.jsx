@@ -43,6 +43,14 @@ class Landing extends Component {
                 <img src="images/redux.png" />
               </div>
               <p className="skill-info">Redux</p>
+              <div className="html">
+                <img src="images/html.png" />
+              </div>
+              <p className="skill-info">HTML5</p>
+              <div className="css">
+                <img src="images/css.png" />
+              </div>
+              <p className="skill-info">CSS</p>
             </div>
           </div>
           <div className="backend">

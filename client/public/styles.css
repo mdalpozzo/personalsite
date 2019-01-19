@@ -92,6 +92,18 @@
 .frontendstuff .redux img {
   height: 70px;
 }
+.frontendstuff .html {
+  grid-row: 4;
+}
+.frontendstuff .html img {
+  height: 70px;
+}
+.frontendstuff .css {
+  grid-row: 5;
+}
+.frontendstuff .css img {
+  height: 70px;
+}
 
 .backendstuff {
   display: grid;
