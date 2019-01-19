@@ -8,25 +8,34 @@ class Landing extends Component {
   constructor() {
     super();
     this.state = {
+      active: false,
     };
   }
 
+  onClick = (e) => {
+    if (document.body.className !== 'open') {
+      document.body.className = 'open';
+    } else {
+      document.body.className = '';
+    }
+  }
 
   render() {
 
     return (
       <div className="navbar-container">
+          <button className="menu-toggle" onClick={this.onClick}></button>
+          <h1>MARLIN DALPOZZO</h1>
         <nav>
-          <a href="#" id="logo"></a>
           <a href="#" id="menu-icon"></a>
-          <ul>
-            <li><a href="#" class="current">Home</a></li>
+          <ul className="menu">
+            <li><a href="#" className="current">Home</a></li>
             <li><a href="#">About</a></li>
             <li><a href="#">Work</a></li>
             <li><a href="#">Blog</a></li>
             <li><a href="#">Contact</a></li>
           </ul>
-          </nav>
+        </nav>
       </div>
     );
   }

@@ -1,6 +1,57 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 $colors: (
   primary: #fffafb,
   accent: #016392,
+  navbar-font: #b69f88,
+  leads: #e88224,
 );
 
 $skills: (
@@ -23,6 +74,12 @@ $skills: (
   background-color: map-get($colors, primary);
 }
 
+/* to remove white space between navbar and landing divs */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
 /* navbar */
 a {
 	color: #4C9CF1;
@@ -35,54 +92,281 @@ a:hover {
 }
 
 .navbar-container {
-  background: #fff;
-	width: 100%;
-	height: 76px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	border-bottom: 4px solid #4C9CF1;
-	z-index: 100;
+  background: #024666;
+  width: 100%;
+  min-height: 70px;
+  color: map-get($colors, navbar-font);
+  // border-bottom: 1px solid #000000;
+  // overflow: visible;
+  box-shadow: 0 1px 2px 0px black;
+  z-index: 1;
+
+  h1 {
+    font-size: 12px;
+    width: 50%;
+    margin-top: 10px;
+  }
+
+  // a {
+  //   color: map-get($colors, navbar-font);
+  //   text-transform: uppercase;
+  //   font-size: 12px;
+  // }
+
+  // a:hover {
+  //   color: map-get($colors, leads);
+  //   text-decoration: none;
+  // }
+
+  // li {
+  //   float: left;
+  //   padding: 0 5px 0 5px;
+  // }
+
+  // nav {
+  //   float: right;
+  // }
 }
 
 nav {
-  float: right;
-	padding: 20px;
 }
 
 #logo{
-	margin: 20px;
-	float: left;
-	width: 200px;
-	height: 40px;
-	background: url('') no-repeat center;
-	display: block;
 }
 
 #menu-icon {
-	display: hidden;
-	width: 40px;
-	height: 40px;
-	background: #4C8FEC url(../img/menu-icon.png) center;
 }
 
-a:hover#menu-icon {
-	background-color: #444;
-	border-radius: 4px 4px 0 0;
-}
+// a:hover#menu-icon {
+// 	background-color: #444;
+// 	border-radius: 4px 4px 0 0;
+// }
 
 ul {
 	list-style: none;
 }
 
 li {
-	display: inline-block;
-	float: left;
-	padding: 10px;
 }
 
 .current {
-	color: #2262AD;
+}
+
+$bp-small: 500px;
+$bp-arrow: 700px;
+$color: #98B296;
+$color-bg: #fcfcf4;
+$color-dark: darken($color, 10%);
+$color-lite: lighten($color, 10%);
+
+@mixin position-center {
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  margin: auto;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  li {
+    cursor: pointer;
+    padding: 6px 20px;
+    font-size: 48px;
+  }
+}
+
+button {
+  opacity: 0.6;
+  background-color: transparent;
+  position: relative;
+  float: right;
+  right: 20px;
+  z-index: 2;
+  top: 24px;
+  border: none;
+  width: 30px;
+  height: 25px;
+  outline: none;
+  transition: opacity 0.1s ease-out;
+  &:before {
+    content: "";
+    @include position-center;
+    right: auto;
+    width: 100%;
+    background: linear-gradient(
+      to bottom, 
+      $color, $color 20%, 
+      transparent 20%, transparent 40%, 
+      $color 40%, $color 60%, 
+      transparent 60%, transparent 80%, 
+      $color 80%, $color 100%
+    );
+    transition: opacity 0.1s ease-out,
+                width 0.1s 0.1s ease-out;
+  }
+  &:after {
+    opacity: 0;
+    content: '×';
+    color: white;
+    position: absolute;
+    top: 16px;
+    left: -4px;
+    font-family: Arial, sans-serif;
+    font-size: 76px;
+    line-height: 0;
+    transition: opacity 0.4s ease-out;
+  }
+  &:active {
+    transform: translateY(2px);
+  }
+  &:hover {
+    opacity: 1;
+  }
+  .open & {
+    opacity: 1;
+    &:before {
+      opacity: 0;
+      width: 0;
+    }
+    &:after {
+      opacity: 1;
+      transform: translate3d(0,0,0)
+                 rotate(360deg);
+      transition: transform 0.2s .2s ease-out,
+                  opacity 0.2s .2s ease-out;
+    }
+  }
+}
+
+nav {
+  z-index: 1;
+  position: fixed;
+  top: -100%; left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translate3d(0,0,0);
+  backface-visibility: hidden;
+  overflow: hidden;
+  &:before {
+    content: '';
+    @include position-center;
+    background: rgba($color-dark, 0.98);
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+    transform: scale(0.04), translateY(9999px);
+    overflow: hidden;
+  }
+  .open & {
+    top: 0;
+    &:before {
+      animation: menu-animation 0.5s ease-out forwards;
+    }
+  }
+}
+
+ul.menu {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%,-50%,0);
+  backface-visibility: hidden;
+  perspective: 1000;
+  color: white;
+  li {
+    opacity: 0;
+    text-align: center;
+    transform: translate3d(0,36px,0);
+    &:before {
+      content: '';
+      @include position-center;
+      left: auto;
+      background-color: white;
+      height: 100%;
+      width: 0;
+      overflow: hidden;
+      transition: width 0.8s ease-out;
+    }
+    &:after {
+      opacity: 0;
+      content: attr(data-text);
+      @include position-center;
+      color: $color;
+      overflow: hidden;
+      transform: translate(-24px, 6px);
+      transition: transform 0.1s ease-out,
+                  opacity 0.1s ease-out;
+    }
+    &:hover {
+      &:before {
+        left: 0;
+        right: auto;
+        width: 100%;
+      }
+      &:after {
+        opacity: 1;
+        padding: 0 20px;
+        transform: translate(0px, 6px);
+        transition: transform 0.2s 0.14s ease-out,
+                    opacity 0.2s 0.14s ease-out;
+      }
+    }
+    .open & {
+      opacity: 1;
+      transform: translate3d(0,0,0);
+      transition: transform 0.2s ease-out,
+                  opacity 0.2s ease-out;
+      @for $i from 1 to 5 {
+        &:nth-child(#{$i}) { transition-delay: $i * 0.1s + 0.05s; }
+      }
+    }
+  }
+}
+
+.landing {
+  transition: 0.2s ease-out;
+  .open & {
+    transform: scale(0.92);
+    transition: transform 0.2s 0.21s ease-out;
+  }
+}
+
+@keyframes menu-animation {
+  0% {
+    opacity: 0;
+    transform: scale(0.04)
+               translateY(300%);
+  }
+  40% {
+    transform: scale(0.04)
+               translateY(0);
+    transition: ease-out;
+  }
+  40% {
+    transform: scale(0.04)
+               translateY(0);
+  }
+  60% {
+    opacity: 1;
+    transform: scale(0.02)
+               translateY(0px);
+  }
+  61% {
+    transform: scale(0.04);
+  }
+  99.9% {
+    height: 0;
+    padding-bottom: 100%;
+    border-radius: 100%;
+  }
+  100% {
+    transform: scale(2);
+    height: 100%;
+    padding-bottom: 0;
+    border-radius: 0;
+  }
 }
 
 /* ---- */
@@ -93,7 +377,7 @@ li {
   background-color: map-get($colors, accent);
 
   .leads {
-    color: #e88224;
+    color: map-get($colors, leads);
     display: inline-block;
     text-align: center;
     width: 100%;

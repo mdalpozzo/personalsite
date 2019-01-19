@@ -21,7 +21,7 @@ class App extends React.Component {
     return (
       <Router>
         <div className="main-wrapper">
-          {/* <NavBar /> */}
+          <NavBar />
           <Route exact path="/" component={Landing} />
         </div>
       </Router>
