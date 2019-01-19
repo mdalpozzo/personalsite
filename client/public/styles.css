@@ -40,7 +40,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
-  margin: 10px 10px 0 10px;
+  margin: 10px 10px 10px 10px;
   text-align: center;
 }
 .landing .attributes .frontend {
