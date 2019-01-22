@@ -1,8 +1,8 @@
 {
-  "name": "tool-share",
+  "name": "personalsite",
   "version": "1.0.0",
   "main": "app.jsx",
-  "repository": "https://github.com/mdalpozzo/tool-share.git",
+  "repository": "https://github.com/mdalpozzo/personalsite.git",
   "author": "Marlin Dalpozzo",
   "license": "MIT",
   "scripts": {
