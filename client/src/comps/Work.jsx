@@ -18,7 +18,6 @@ class Work extends Component {
             <h1>Some of my projects...</h1>
             <h2> </h2>
           </div>
-          <img src="images/hiking1.jpg" />
         </div>
         <div className="project-tile">
           <a href="http://tool-share-og.herokuapp.com/">Tool Share</a>

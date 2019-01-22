@@ -14,11 +14,11 @@ class About extends Component {
     return (
       <div className="about-container">
         <div className="banner">
+          <img src="images/hiking1.jpg" />
           <div className="leads">
             <h1>Software engineer, songwriter, adventurer</h1>
             <h2> </h2>
           </div>
-          <img src="images/hiking1.jpg" />
         </div>
         <p className="aboutblurb">
           I have experience building full-stack applications using Node, JavaScript, React, Redux,

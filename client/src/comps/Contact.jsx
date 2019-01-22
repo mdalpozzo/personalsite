@@ -18,7 +18,6 @@ class Contact extends Component {
             <h1>Contact Me</h1>
             <h2> </h2>
           </div>
-          <img src="images/hiking1.jpg" />
         </div>
         <div className="namebox">
           <p>Marlin Dalpozzo</p>
