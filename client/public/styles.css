@@ -144,7 +144,7 @@ table {
 
 /* MOBILE FIRST ----------- */
 /* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 415px) {
   #app,
 html,
 body,
