@@ -8,6 +8,7 @@ import { bindActionCreators } from 'redux';
 
 import Landing from './comps/Landing.jsx';
 import NavBar from './comps/NavBar.jsx';
+import About from './comps/About.jsx';
 
 import * as actions from './actions/actions';
 import store from './store/store';
@@ -23,6 +24,7 @@ class App extends React.Component {
         <div className="main-wrapper">
           <NavBar />
           <Route exact path="/" component={Landing} />
+          <Route exact path="/about" component={About} />
         </div>
       </Router>
     );
@@ -31,11 +33,7 @@ class App extends React.Component {
 
 const mapStateToProps = state => state.stories;
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {},
-    dispatch
-  );
+const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 
 export default connect(
   mapStateToProps,

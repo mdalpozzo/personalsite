@@ -24,23 +24,23 @@ class Landing extends Component {
           <div className="frontend skill-section">
             <h3>Front-End</h3>
             <div className="frontendstuff">
-              <div className="javascript">
+              <div className="javascript skill-button">
                 <img className="skill-img" src="images/javascript.png" />
                 <p className="skill-info">JavaScript (ES6)</p>
               </div>
-              <div className="react">
+              <div className="react skill-button">
                 <img className="skill-img" src="images/react.png" />
                 <p className="skill-info">React</p>
               </div>
-              <div className="redux">
+              <div className="redux skill-button">
                 <img className="skill-img" src="images/redux.png" />
                 <p className="skill-info">Redux</p>
               </div>
-              <div className="html">
+              <div className="html skill-button">
                 <img className="skill-img" src="images/html.png" />
                 <p className="skill-info">HTML5</p>
               </div>
-              <div className="css">
+              <div className="css skill-button">
                 <img className="skill-img" src="images/css.png" />
                 <p className="skill-info">CSS</p>
               </div>
@@ -49,32 +49,32 @@ class Landing extends Component {
           <div className="backend skill-section">
             <h3>Back-End</h3>
             <div className="backendstuff">
-              <div className="node">
+              <div className="node skill-button">
                 <img className="skill-img" src="images/node.png" />
                 <p className="skill-info">Node.js</p>
               </div>
-              <div className="mongo">
+              <div className="mongo skill-button">
                 <img className="skill-img" src="images/mongo.png" />
                 <p className="skill-info">NoSQL Databases</p>
               </div>
-              <div className="sql">
+              <div className="sql skill-button">
                 <img className="skill-img" src="images/sql.png" />
                 <p className="skill-info">SQL Databases</p>
               </div>
             </div>
           </div>
           <div className="tools skill-section">
-            <h3>Tools/Deployment/Testing</h3>
+            <h3>Other Tools</h3>
             <div className="otherstuff">
-              <div className="git">
+              <div className="git skill-button">
                 <img className="skill-img" src="images/git.png" />
                 <p className="skill-info">Git</p>
               </div>
-              <div className="github">
+              <div className="github skill-button">
                 <img className="skill-img" src="images/github.png" />
                 <p className="skill-info">Github</p>
               </div>
-              <div className="docker">
+              <div className="docker skill-button">
                 <img className="skill-img" src="images/docker.png" />
                 <p className="skill-info">Docker</p>
               </div>

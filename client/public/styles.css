@@ -194,19 +194,20 @@ body,
   position: absolute;
 }
 
-a {
+.navlink {
   color: #b69f88;
   text-decoration: none;
+  display: inline;
 }
 @media (max-width: 500px) {
-  a {
+  .navlink {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 20px;
   }
 }
 
-a:hover {
+.navlink:hover {
   color: #e88224;
   text-decoration: none;
 }
@@ -509,21 +510,62 @@ ul {
   }
 }
 
-.attributes .backend {
-  padding-bottom: 5px;
-}
-.attributes .tools h3 {
-  font-size: 20px;
-}
 .attributes h3 {
   text-align: center;
   font-size: 24px;
   margin-bottom: 10px;
 }
+.attributes .backend {
+  background-color: #eaf2ff;
+  padding-bottom: 5px;
+}
+.attributes .tools {
+  background-color: #ffeeda;
+}
 
+@media (min-width: 700px) {
+  .attributes {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-auto-flow: column;
+    column-gap: 10px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+  }
+  .attributes .frontend {
+    grid-column: 1;
+    padding-top: 10px;
+  }
+  .attributes .backend {
+    grid-column: 2;
+    padding-top: 10px;
+  }
+  .attributes .tools {
+    grid-column: 3;
+    padding-top: 10px;
+  }
+
+  .skill-section {
+    box-shadow: inset 0 0 5px #000000;
+  }
+}
 .skill-img {
-  height: 50px;
   margin: auto;
+}
+@media (max-width: 500px) {
+  .skill-img {
+    height: 50px;
+  }
+}
+@media (min-width: 500px) {
+  .skill-img {
+    height: 35px;
+  }
+}
+@media (min-width: 700px) {
+  .skill-img {
+    height: 50px;
+  }
 }
 
 .frontendstuff {
@@ -576,7 +618,5 @@ ul {
 .otherstuff .docker {
   grid-row: 1;
 }
-
-/* Desktops and laptops ----------- */
 
 /*# sourceMappingURL=styles.css.map */

@@ -12,34 +12,48 @@ class Landing extends Component {
     };
   }
 
-  onClick = (e) => {
+  onClick = e => {
     if (document.body.className !== 'open') {
       document.body.className = 'open';
     } else {
       document.body.className = '';
     }
-  }
+  };
 
   render() {
-
     return (
       <div className="navbar-container">
         <div>
           <h1>MARLIN DALPOZZO</h1>
         </div>
-          <div className="button menu-toggle" onClick={this.onClick}>
-            {/* <div class="bar1"></div>
+        <div className="button menu-toggle" onClick={this.onClick}>
+          {/* <div class="bar1"></div>
             <div class="bar2"></div>
             <div class="bar3"></div> */}
-          </div>
+        </div>
         <nav>
-          <a href="#" id="menu-icon"></a>
+          <a href="#" id="menu-icon" />
           <ul className="menu">
-            <li><a href="#" className="current">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li>
+              <Link className="navlink" to="/">
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link className="navlink" to="/about">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link className="navlink" to="/">
+                Work
+              </Link>
+            </li>
+            <li>
+              <Link className="navlink" to="/">
+                Contact
+              </Link>
+            </li>
           </ul>
         </nav>
       </div>
@@ -53,11 +67,7 @@ class Landing extends Component {
 //   // errors: PropTypes.object.isRequired,
 // };
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {},
-    dispatch
-  );
+const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 
 const mapStateToProps = state => ({});
 
