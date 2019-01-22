@@ -128,6 +128,32 @@ table {
   border-spacing: 0;
 }
 
+@mixin for-phone-only {
+  @media (max-width: 500px) {
+    @content;
+  }
+}
+@mixin for-tablet-portrait-up {
+  @media (min-width: 500px) {
+    @content;
+  }
+}
+@mixin for-tablet-landscape-up {
+  @media (min-width: 900px) {
+    @content;
+  }
+}
+@mixin for-desktop-up {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+@mixin for-big-desktop-up {
+  @media (min-width: 1800px) {
+    @content;
+  }
+}
+
 $colors: (
   primary: #fffafb,
   accent: #016392,
@@ -149,97 +175,107 @@ $skills: (
   text-align: center;
 }
 
-/* MOBILE FIRST ----------- */
+/* NAVBAR */
+#app,
+html,
+body,
+.main-wrapper {
+  height: 100%;
+  width: 100%;
+  background-color: map-get($colors, primary);
+}
 
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 415px) {
-  #app,
-  html,
-  body,
-  .main-wrapper {
-    height: 100%;
-    width: 100%;
-    background-color: map-get($colors, primary);
+/* to remove white space between navbar and landing divs */
+.main-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* navbar ============================================================================*/
+.navbar-container {
+  background: #024666;
+  width: 100%;
+  min-height: 50px;
+  color: map-get($colors, navbar-font);
+  // border-bottom: 1px solid #000000;
+  overflow: visible;
+  box-shadow: 0 1px 2px 0px rgb(19, 19, 19);
+  z-index: 1;
+  text-align: center;
+
+  @include for-tablet-portrait-up {
+    nav {
+      content: normal;
+      margin-top: 25px;
+    }
+
+    ul.menu {
+      content: normal;
+    }
+
+    li {
+      display: inline;
+      padding: 0 5px 0 5px;
+      margin: 0 1rem 0 1rem;
+    }
+
+    .button {
+      visibility: hidden;
+    }
   }
 
-  /* to remove white space between navbar and landing divs */
-  .main-wrapper {
-    display: flex;
-    flex-direction: column;
+  h1 {
+    font-size: 12px;
+    width: 50%;
+    margin: 9px 0 0 5px;
+    text-align: left;
+    position: absolute;
   }
+}
 
-  /* navbar */
-  a {
-    color: map-get($colors, navbar-font);
-    text-decoration: none;
+a {
+  color: map-get($colors, navbar-font);
+  text-decoration: none;
+
+  @include for-phone-only {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 20px;
   }
+}
 
-  a:hover {
-    color: map-get($colors, leads);
-    text-decoration: none;
-  }
+a:hover {
+  color: map-get($colors, leads);
+  text-decoration: none;
+}
 
-  .navbar-container {
-    background: #024666;
-    width: 100%;
-    min-height: 70px;
-    color: map-get($colors, navbar-font);
-    // border-bottom: 1px solid #000000;
-    overflow: visible;
-    box-shadow: 0 1px 2px 0px black;
-    z-index: 1;
-    text-align: center;
+// a:hover#menu-icon {
+// 	background-color: #444;
+// 	border-radius: 4px 4px 0 0;
+// }
 
-    h1 {
-      font-size: 12px;
-      width: 50%;
-      margin: 9px 0 0 5px;
-      text-align: left;
-    }
-  }
+ul {
+  list-style: none;
+}
 
-  nav {
-  }
+/* MENU ANIMATION ----------- */
 
-  #logo {
-  }
+@mixin position-center {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
 
-  #menu-icon {
-  }
-
-  // a:hover#menu-icon {
-  // 	background-color: #444;
-  // 	border-radius: 4px 4px 0 0;
-  // }
-
-  ul {
-    list-style: none;
-  }
-
-  li {
-  }
-
-  .current {
-  }
-
+@include for-phone-only {
   $bp-small: 500px;
   $bp-arrow: 700px;
-  $color: #98b296;
+  $color: #d6b282;
   $color-bg: #fcfcf4;
   $color-dark: darken($color, 10%);
   $color-lite: lighten($color, 10%);
-
-  @mixin position-center {
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-  }
 
   ul {
     list-style: none;
@@ -256,13 +292,10 @@ $skills: (
     opacity: 0.6;
     background-color: transparent;
     position: relative;
-    // float: right;
-    // right: 20px;
-    top: 5px;
     z-index: 2;
     border: none;
     width: 60px;
-    height: 40px;
+    height: 60px;
     margin: 0 auto;
     outline: none;
     transition: opacity 0.1s ease-out;
@@ -295,7 +328,7 @@ $skills: (
       content: '×';
       color: white;
       position: absolute;
-      top: 16px;
+      top: 27px;
       left: 8px;
       font-family: Arial, sans-serif;
       font-size: 76px;
@@ -448,368 +481,381 @@ $skills: (
       border-radius: 0;
     }
   }
+}
+/* ---- */
 
-  /* ---- */
+#banner1-bg {
+  height: 20rem;
+  position: relative;
+  background-color: map-get($colors, accent);
 
-  #banner1-bg {
-    height: 20rem;
-    position: relative;
-    background-color: map-get($colors, accent);
+  .leads {
+    color: map-get($colors, leads);
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    @include for-tablet-portrait-up {
+      padding-right: 10rem;
+    }
 
-    .leads {
-      color: map-get($colors, leads);
-      display: inline-block;
-      text-align: center;
-      width: 100%;
+    h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 26px;
 
-      h1 {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 26px;
+      @include for-phone-only {
+        margin-right: 5rem;
+        margin-top: 2rem;
+      }
+
+      @include for-tablet-portrait-up {
         margin-top: 4rem;
-        margin-right: 5rem;
       }
 
-      .line-break {
-        margin-right: 5rem;
-      }
+      &:after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        padding-top: 20px;
+        border-bottom: 1px solid map-get($colors, leads);
 
-      h2 {
-        font-family: 'Arvo', serif;
-        font-size: 18px;
-        text-decoration: none;
-        margin-top: 3rem;
-        margin-right: 10rem;
+        @include for-phone-only {
+          width: 50%;
+        }
+
+        @include for-tablet-portrait-up {
+          width: 20%;
+        }
       }
     }
 
-    img {
-      width: 15rem;
-      right: 0.01rem;
-      position: absolute;
-      display: inline-block;
-      bottom: 0;
+    // .line-break {
+    //   margin: auto;
+    //   margin-right: 15rem;
+    //   width: 10rem;
+    //   border-bottom: 1px solid map-get($colors, leads);
+    // }
+
+    h2 {
+      font-family: 'Arvo', serif;
+      font-size: 18px;
+      text-decoration: none;
+      margin-top: 3rem;
+      margin-right: 10rem;
+
+      @include for-tablet-portrait-up {
+        margin-right: 0;
+      }
     }
   }
 
-  .attributes {
-    .frontend {
-      // background-color: #ffe7e7;
+  img {
+    width: 15rem;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+    @include for-phone-only {
+      right: -1.2rem;
     }
-
-    .backend {
-      // background-color: #c3ecff;
-      padding-bottom: 5px;
+    @include for-tablet-portrait-up {
+      right: 2rem;
     }
+  }
+}
 
-    .tools {
-      // background-color: #f5f6ff;
+.attributes {
+  .frontend {
+    // background-color: #ffe7e7;
+  }
 
-      h3 {
-        font-size: 20px;
-      }
-    }
+  .backend {
+    // background-color: #c3ecff;
+    padding-bottom: 5px;
+  }
+
+  .tools {
+    // background-color: #f5f6ff;
 
     h3 {
-      text-align: center;
-      font-size: 24px;
-      margin-bottom: 10px;
+      font-size: 20px;
     }
   }
 
-  .skill-img {
-    height: 50px;
-    margin: auto;
-  }
-
-  .frontendstuff {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: map-get($skills, rowheight);
-
-    .react {
-      grid-row: 1;
-    }
-
-    .javascript {
-      grid-row: 1;
-    }
-
-    .redux {
-      grid-row: 1;
-    }
-
-    .html {
-      grid-row: 2;
-    }
-
-    .css {
-      grid-row: 2;
-    }
-  }
-
-  .backendstuff {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: map-get($skills, rowheight);
-
-    .node {
-      grid-row: 1;
-    }
-
-    .mongo {
-      grid-row: 1;
-    }
-
-    .sql {
-      grid-row: 1;
-    }
-  }
-
-  .otherstuff {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: map-get($skills, rowheight);
-
-    .git {
-      grid-row: 1;
-    }
-
-    .github {
-      grid-row: 1;
-    }
-
-    .docker {
-      grid-row: 1;
-    }
+  h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
   }
 }
 
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
-  /* Styles */
+.skill-img {
+  height: 50px;
+  margin: auto;
 }
 
-/* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 320px) {
-  /* Styles */
+.frontendstuff {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: map-get($skills, rowheight);
+
+  .react {
+    grid-row: 1;
+  }
+
+  .javascript {
+    grid-row: 1;
+  }
+
+  .redux {
+    grid-row: 1;
+  }
+
+  .html {
+    grid-row: 2;
+  }
+
+  .css {
+    grid-row: 2;
+  }
 }
 
-@media only screen and (min-width: 700px) {
+.backendstuff {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: map-get($skills, rowheight);
+
+  .node {
+    grid-row: 1;
+  }
+
+  .mongo {
+    grid-row: 1;
+  }
+
+  .sql {
+    grid-row: 1;
+  }
 }
+
+.otherstuff {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: map-get($skills, rowheight);
+
+  .git {
+    grid-row: 1;
+  }
+
+  .github {
+    grid-row: 1;
+  }
+
+  .docker {
+    grid-row: 1;
+  }
+}
+
+// /* Smartphones (portrait and landscape) ----------- */
+// @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+//   /* Styles */
+// }
+
+// /* Smartphones (landscape) ----------- */
+// @media only screen and (min-width: 320px) {
+//   /* Styles */
+// }
+
+// @media only screen and (min-width: 700px) {
+// }
 
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1200px) {
-  .skill-section {
-    box-shadow: inset 0 0 5px #000000;
-  }
+// @media only screen and (min-width: 1200px) {
+//   .skill-section {
+//     box-shadow: inset 0 0 5px #000000;
+//   }
 
-  .navbar-container {
-    // background: #024666;
-
-    // li {
-    //   float: left;
-    //   padding: 0 5px 0 5px;
-    // }
-
-    // nav {
-    //   float: right;
-    //   top: 0;
-    //   border-radius: 0;
-    //   padding-bottom: 0;
-    //   content: normal;
-
-    // }
-
-    // ul.menu {
-    //   content: normal;
-    //   top: 0;
-    //   left: 0;
-    // }
-
-    // .button {
-    //   visibility: hidden;
-    // }
-  }
-
-  .landing {
-    width: 100%;
-
-    #banner1-bg {
-      height: 35rem;
-      position: relative;
-
-      .leads {
-        width: 60%;
-        color: #e88224;
-        display: inline-block;
-        margin-top: 5rem;
-        margin-left: 5rem;
-
-        h1 {
-          font-size: 72px;
-        }
-
-        h2 {
-          margin-top: 25px;
-          margin-right: 0;
-          font-size: 40px;
-          text-align: center;
-        }
-      }
-
-      img {
-        width: 600px;
-        position: absolute;
-        right: -5%;
-        display: inline-block;
-        bottom: 0;
-      }
-    }
-
-    .attributes {
-      display: grid;
-      min-height: 100%;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 10px;
-      padding: 10px 10px 10px 10px;
-      text-align: center;
-      width: 100%;
-
-      .frontend {
-        grid-row: 1;
-        padding-top: 10px;
-      }
-
-      .backend {
-        grid-row: 1;
-        padding-top: 10px;
-      }
-
-      .tools {
-        grid-row: 1;
-        padding-top: 10px;
-
-        h3 {
-          font-size: 22px;
-        }
-      }
-    }
-  }
-
-  .frontendstuff {
-    display: grid;
-    min-height: 100%;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: map-get($skills, rowheightdesktop) map-get($skills, rowheightdesktop) map-get(
-        $skills,
-        rowheightdesktop
-      );
-
-    .javascript {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-
-    .react {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-
-    .redux {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-
-    .html {
-      grid-row: 2;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-
-    .css {
-      grid-row: 2;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-  }
-
-  .backendstuff {
-    display: grid;
-    // min-height: 100%;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: map-get($skills, rowheight);
-
-    .node {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-
-    .mongo {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-
-    .sql {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-  }
-
-  .otherstuff {
-    display: grid;
-    // min-height: 100%;
-    grid-template-columns: 100px 1fr;
-    grid-template-rows: map-get($skills, rowheight);
-
-    .git {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-
-    .github {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-
-    .docker {
-      grid-row: 1;
-
-      img {
-        height: map-get($skills, imgheight);
-      }
-    }
-  }
-
-  // .skill-info {
-  //   text-align: left;
-  //     line-height: map-get($skills, rowheight);
-  // }
+.navbar-container {
+  // background: #024666;
 }
+
+//   .landing {
+//     width: 100%;
+
+//     #banner1-bg {
+//       height: 35rem;
+//       position: relative;
+
+//       .leads {
+//         width: 60%;
+//         color: #e88224;
+//         display: inline-block;
+//         margin-top: 5rem;
+//         margin-left: 5rem;
+
+//         h1 {
+//           font-size: 72px;
+//         }
+
+//         h2 {
+//           margin-top: 25px;
+//           margin-right: 0;
+//           font-size: 40px;
+//           text-align: center;
+//         }
+//       }
+
+//       img {
+//         width: 600px;
+//         position: absolute;
+//         right: -5%;
+//         display: inline-block;
+//         bottom: 0;
+//       }
+//     }
+
+//     .attributes {
+//       display: grid;
+//       min-height: 100%;
+//       grid-template-columns: 1fr 1fr 1fr;
+//       column-gap: 10px;
+//       padding: 10px 10px 10px 10px;
+//       text-align: center;
+//       width: 100%;
+
+//       .frontend {
+//         grid-row: 1;
+//         padding-top: 10px;
+//       }
+
+//       .backend {
+//         grid-row: 1;
+//         padding-top: 10px;
+//       }
+
+//       .tools {
+//         grid-row: 1;
+//         padding-top: 10px;
+
+//         h3 {
+//           font-size: 22px;
+//         }
+//       }
+//     }
+//   }
+
+//   .frontendstuff {
+//     display: grid;
+//     min-height: 100%;
+//     grid-template-columns: 1fr 1fr 1fr;
+//     grid-template-rows: map-get($skills, rowheightdesktop) map-get($skills, rowheightdesktop) map-get(
+//         $skills,
+//         rowheightdesktop
+//       );
+
+//     .javascript {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+
+//     .react {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+
+//     .redux {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+
+//     .html {
+//       grid-row: 2;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+
+//     .css {
+//       grid-row: 2;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+//   }
+
+//   .backendstuff {
+//     display: grid;
+//     // min-height: 100%;
+//     grid-template-columns: 100px 1fr;
+//     grid-template-rows: map-get($skills, rowheight);
+
+//     .node {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+
+//     .mongo {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+
+//     .sql {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+//   }
+
+//   .otherstuff {
+//     display: grid;
+//     // min-height: 100%;
+//     grid-template-columns: 100px 1fr;
+//     grid-template-rows: map-get($skills, rowheight);
+
+//     .git {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+
+//     .github {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+
+//     .docker {
+//       grid-row: 1;
+
+//       img {
+//         height: map-get($skills, imgheight);
+//       }
+//     }
+//   }
+
+//   // .skill-info {
+//   //   text-align: left;
+//   //     line-height: map-get($skills, rowheight);
+//   // }
+// }

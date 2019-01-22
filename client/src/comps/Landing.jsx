@@ -7,19 +7,15 @@ import { bindActionCreators } from 'redux';
 class Landing extends Component {
   constructor() {
     super();
-    this.state = {
-    };
+    this.state = {};
   }
 
-
   render() {
-
     return (
       <div className="landing">
         <div id="banner1-bg">
           <div className="leads">
             <h1>MARLIN DALPOZZO</h1>
-            <div className="line-break">_________________________________</div>
             <h2>Full-Stack Software Engineer</h2>
           </div>
           <img src="images/mar1trans.png" />
@@ -96,11 +92,7 @@ class Landing extends Component {
 //   // errors: PropTypes.object.isRequired,
 // };
 
-const mapDispatchToProps = dispatch =>
-  bindActionCreators(
-    {},
-    dispatch
-  );
+const mapDispatchToProps = dispatch => bindActionCreators({}, dispatch);
 
 const mapStateToProps = state => ({});
 
