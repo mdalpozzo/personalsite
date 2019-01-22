@@ -9,6 +9,8 @@ import { bindActionCreators } from 'redux';
 import Landing from './comps/Landing.jsx';
 import NavBar from './comps/NavBar.jsx';
 import About from './comps/About.jsx';
+import Work from './comps/Work.jsx';
+import Contact from './comps/Contact.jsx';
 
 import * as actions from './actions/actions';
 import store from './store/store';
@@ -25,6 +27,8 @@ class App extends React.Component {
           <NavBar />
           <Route exact path="/" component={Landing} />
           <Route exact path="/about" component={About} />
+          <Route exact path="/work" component={Work} />
+          <Route exact path="/contact" component={Contact} />
         </div>
       </Router>
     );

@@ -13,7 +13,7 @@ class Landing extends Component {
   render() {
     return (
       <div className="landing">
-        <div id="banner1-bg">
+        <div className="banner">
           <div className="leads">
             <h1>MARLIN DALPOZZO</h1>
             <h2>Full-Stack Software Engineer</h2>

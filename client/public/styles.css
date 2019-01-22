@@ -201,10 +201,15 @@ body,
 }
 @media (max-width: 500px) {
   .navlink {
+    color: #000000;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 20px;
   }
+}
+
+.namelink {
+  color: #b69f88;
 }
 
 .navlink:hover {
@@ -252,7 +257,6 @@ ul {
     width: 100%;
     background: linear-gradient(to bottom, transparent, transparent 7.5%, #d6b282 7.5%, #d6b282 22.5%, transparent 22.5%, transparent 37.5%, #d6b282 37.5%, #d6b282 52.5%, transparent 52.5%, transparent 67.5%, #d6b282 67.5%, #d6b282 82.5%, transparent 82.5%, transparent 100%);
     clip-path: circle(50% at 50% 50%);
-    transition: opacity 0.1s ease-out, width 0.1s 0.1s ease-out;
   }
   .button:after {
     opacity: 0;
@@ -327,54 +331,15 @@ ul {
     transform: translate3d(-50%, -50%, 0);
     backface-visibility: hidden;
     perspective: 1000;
-    color: white;
+    color: black;
   }
   ul.menu li {
     opacity: 0;
     text-align: center;
     transform: translate3d(0, 36px, 0);
   }
-  ul.menu li:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    left: auto;
-    background-color: white;
-    height: 100%;
-    width: 0;
-    overflow: hidden;
-    transition: width 0.8s ease-out;
-  }
-  ul.menu li:after {
-    opacity: 0;
-    content: attr(data-text);
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    margin: auto;
-    color: #d6b282;
-    overflow: hidden;
-    transform: translate(-24px, 6px);
-    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
-  }
-  ul.menu li:hover:before {
-    left: 0;
-    right: auto;
-    width: 100%;
-  }
-  ul.menu li:hover:after {
-    opacity: 1;
-    padding: 0 20px;
-    transform: translate(0px, 6px);
-    transition: transform 0.2s 0.14s ease-out, opacity 0.2s 0.14s ease-out;
-  }
   .open ul.menu li {
+    color: #000000;
     opacity: 1;
     transform: translate3d(0, 0, 0);
     transition: transform 0.2s ease-out, opacity 0.2s ease-out;
@@ -433,38 +398,38 @@ ul {
   }
 }
 /* ---- */
-#banner1-bg {
+.banner {
   height: 20rem;
   position: relative;
   background-color: #016392;
 }
-#banner1-bg .leads {
+.banner .leads {
   color: #e88224;
   display: inline-block;
   text-align: center;
   width: 100%;
 }
 @media (min-width: 500px) {
-  #banner1-bg .leads {
+  .banner .leads {
     padding-right: 10rem;
   }
 }
-#banner1-bg .leads h1 {
+.banner .leads h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 26px;
 }
 @media (max-width: 500px) {
-  #banner1-bg .leads h1 {
+  .banner .leads h1 {
     margin-right: 5rem;
     margin-top: 2rem;
   }
 }
 @media (min-width: 500px) {
-  #banner1-bg .leads h1 {
+  .banner .leads h1 {
     margin-top: 4rem;
   }
 }
-#banner1-bg .leads h1:after {
+.banner .leads h1:after {
   content: "";
   display: block;
   margin: 0 auto;
@@ -472,16 +437,16 @@ ul {
   border-bottom: 1px solid #e88224;
 }
 @media (max-width: 500px) {
-  #banner1-bg .leads h1:after {
+  .banner .leads h1:after {
     width: 50%;
   }
 }
 @media (min-width: 500px) {
-  #banner1-bg .leads h1:after {
+  .banner .leads h1:after {
     width: 20%;
   }
 }
-#banner1-bg .leads h2 {
+.banner .leads h2 {
   font-family: "Arvo", serif;
   font-size: 18px;
   text-decoration: none;
@@ -489,23 +454,23 @@ ul {
   margin-right: 10rem;
 }
 @media (min-width: 500px) {
-  #banner1-bg .leads h2 {
+  .banner .leads h2 {
     margin-right: 0;
   }
 }
-#banner1-bg img {
+.banner img {
   width: 15rem;
   position: absolute;
   display: inline-block;
   bottom: 0;
 }
 @media (max-width: 500px) {
-  #banner1-bg img {
+  .banner img {
     right: -1.2rem;
   }
 }
 @media (min-width: 500px) {
-  #banner1-bg img {
+  .banner img {
     right: 2rem;
   }
 }
@@ -617,6 +582,42 @@ ul {
 }
 .otherstuff .docker {
   grid-row: 1;
+}
+
+/* CONTACT PAGE =========================== */
+.contact-container {
+  text-align: center;
+}
+.contact-container p {
+  margin: 0;
+}
+
+.namebox {
+  background-color: #ffc7c7;
+}
+
+/* ABOUT PAGE ====================== */
+.about-container p {
+  margin: 5rem 5rem 0 5rem;
+}
+
+/* WORK PAGE ====================== */
+.project-tile {
+  margin: 5rem auto;
+  text-align: center;
+  width: 75%;
+}
+.project-tile .specs {
+  text-align: left;
+  margin-left: 25%;
+}
+.project-tile p {
+  margin: 0;
+}
+.project-tile img {
+  margin-top: 2rem;
+  display: block;
+  width: 100%;
 }
 
 /*# sourceMappingURL=styles.css.map */

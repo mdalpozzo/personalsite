@@ -24,34 +24,34 @@ class Landing extends Component {
     return (
       <div className="navbar-container">
         <div>
-          <h1>MARLIN DALPOZZO</h1>
+          <h1>
+            <Link className="namelink" to="/">
+              MARLIN DALPOZZO
+            </Link>
+          </h1>
         </div>
-        <div className="button menu-toggle" onClick={this.onClick}>
-          {/* <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div> */}
-        </div>
+        <div className="button menu-toggle" onClick={this.onClick} />
         <nav>
           <a href="#" id="menu-icon" />
           <ul className="menu">
-            <li>
+            <li onClick={this.onClick}>
               <Link className="navlink" to="/">
                 Home
               </Link>
             </li>
-            <li>
+            <li onClick={this.onClick}>
               <Link className="navlink" to="/about">
                 About
               </Link>
             </li>
-            <li>
-              <Link className="navlink" to="/">
+            <li onClick={this.onClick}>
+              <Link className="navlink" to="/work">
                 Work
               </Link>
             </li>
-            <li>
-              <Link className="navlink" to="/">
-                Contact
+            <li onClick={this.onClick}>
+              <Link className="navlink" to="/contact">
+                Contact / Social Media
               </Link>
             </li>
           </ul>

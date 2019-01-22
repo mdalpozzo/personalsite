@@ -239,10 +239,15 @@ body,
   display: inline;
 
   @include for-phone-only {
+    color: #000000;
     font-weight: bold;
     text-transform: uppercase;
     font-size: 20px;
   }
+}
+
+.namelink {
+  color: map-get($colors, navbar-font);
 }
 
 .navlink:hover {
@@ -322,7 +327,6 @@ ul {
         transparent 100%
       );
       clip-path: circle(50% at 50% 50%);
-      transition: opacity 0.1s ease-out, width 0.1s 0.1s ease-out;
     }
     &:after {
       opacity: 0;
@@ -393,44 +397,14 @@ ul {
     transform: translate3d(-50%, -50%, 0);
     backface-visibility: hidden;
     perspective: 1000;
-    color: white;
+    color: rgb(0, 0, 0);
     li {
       opacity: 0;
       text-align: center;
       transform: translate3d(0, 36px, 0);
-      &:before {
-        content: '';
-        @include position-center;
-        left: auto;
-        background-color: white;
-        height: 100%;
-        width: 0;
-        overflow: hidden;
-        transition: width 0.8s ease-out;
-      }
-      &:after {
-        opacity: 0;
-        content: attr(data-text);
-        @include position-center;
-        color: $color;
-        overflow: hidden;
-        transform: translate(-24px, 6px);
-        transition: transform 0.1s ease-out, opacity 0.1s ease-out;
-      }
-      &:hover {
-        &:before {
-          left: 0;
-          right: auto;
-          width: 100%;
-        }
-        &:after {
-          opacity: 1;
-          padding: 0 20px;
-          transform: translate(0px, 6px);
-          transition: transform 0.2s 0.14s ease-out, opacity 0.2s 0.14s ease-out;
-        }
-      }
+
       .open & {
+        color: #000000;
         opacity: 1;
         transform: translate3d(0, 0, 0);
         transition: transform 0.2s ease-out, opacity 0.2s ease-out;
@@ -485,7 +459,7 @@ ul {
 }
 /* ---- */
 
-#banner1-bg {
+.banner {
   height: 20rem;
   position: relative;
   background-color: map-get($colors, accent);
@@ -682,5 +656,48 @@ ul {
 
   .docker {
     grid-row: 1;
+  }
+}
+
+/* CONTACT PAGE =========================== */
+
+.contact-container {
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+}
+
+.namebox {
+  background-color: #ffc7c7;
+}
+
+/* ABOUT PAGE ====================== */
+.about-container {
+  p {
+    margin: 5rem 5rem 0 5rem;
+  }
+}
+
+/* WORK PAGE ====================== */
+.project-tile {
+  margin: 5rem auto;
+  text-align: center;
+  width: 75%;
+
+  .specs {
+    text-align: left;
+    margin-left: 25%;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  img {
+    margin-top: 2rem;
+    display: block;
+    width: 100%;
   }
 }
