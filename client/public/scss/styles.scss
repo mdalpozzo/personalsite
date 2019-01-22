@@ -83,13 +83,16 @@ $skills: (
 
 /* navbar */
 a {
-	color: #4C9CF1;
+  color: map-get($colors, navbar-font);
 	text-decoration: none;
-	font-weight: bold;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 a:hover {
-	color: #444;
+  color: map-get($colors, leads);
+  text-decoration: none;
 }
 
 .navbar-container {
@@ -98,7 +101,7 @@ a:hover {
   min-height: 70px;
   color: map-get($colors, navbar-font);
   // border-bottom: 1px solid #000000;
-  // overflow: visible;
+  overflow: visible;
   box-shadow: 0 1px 2px 0px black;
   z-index: 1;
   text-align: center;
@@ -109,26 +112,6 @@ a:hover {
     margin: 9px 0 0 5px;
     text-align: left;
   }
-
-  // a {
-  //   color: map-get($colors, navbar-font);
-  //   text-transform: uppercase;
-  //   font-size: 12px;
-  // }
-
-  // a:hover {
-  //   color: map-get($colors, leads);
-  //   text-decoration: none;
-  // }
-
-  // li {
-  //   float: left;
-  //   padding: 0 5px 0 5px;
-  // }
-
-  // nav {
-  //   float: right;
-  // }
 }
 
 nav {
@@ -179,27 +162,6 @@ ul {
   }
 }
 
-// .bar1 {
-//   width: 35px;
-//   height: 5px;
-//   background-color: black;
-//   margin: 6px 0;
-// }
-
-// .bar2 {
-//   width: 35px;
-//   height: 5px;
-//   background-color: black;
-//   margin: 6px 0;
-// }
-
-// .bar3 {
-//   width: 35px;
-//   height: 5px;
-//   background-color: black;
-//   margin: 6px 0;
-// }
-
 .button {
   opacity: 0.6;
   background-color: transparent;
@@ -249,6 +211,7 @@ ul {
   }
   &:hover {
     opacity: 1;
+    cursor: pointer;
   }
   .open & {
     opacity: 1;
@@ -540,16 +503,56 @@ ul.menu {
   /* Styles */
   }
 
+@media only screen and (min-width : 700px) {
+
+}
+
   /* Desktops and laptops ----------- */
-@media only screen  and (min-width : 1140px) {
+@media only screen  and (min-width : 1200px) {
   
   .skill-section {
-  box-shadow: inset 0 0 5px #000000;
+    box-shadow: inset 0 0 5px #000000;
+  }
 
+  .navbar-container {
+
+    // background: #024666;
+
+    // li {
+    //   float: left;
+    //   padding: 0 5px 0 5px;
+    // }
+  
+    // nav {
+    //   float: right;
+    //   top: 0;
+    //   border-radius: 0;
+    //   padding-bottom: 0;
+    //   content: normal;
+
+    // }
+
+    // ul.menu {
+    //   content: normal;
+    //   top: 0;
+    //   left: 0;
+    // }
+
+    // .button {
+    //   visibility: hidden;
+    // }
+  }
+
+  nav {
+    &:before {
+      all: unset;
+    }
   }
   
 
   .landing {
+    width: 100%;
+
     #banner1-bg {
       height: 35rem;
       position: relative;
@@ -558,7 +561,7 @@ ul.menu {
         width: 60%;
         color: #e88224;
         display: inline-block;
-        margin-top: 10rem;
+        margin-top: 5rem;
         margin-left: 5rem;
   
         h1 {
@@ -585,8 +588,9 @@ ul.menu {
       min-height: 100%;
       grid-template-columns: 1fr 1fr 1fr;
       column-gap: 10px;
-      margin: 10px 10px 10px 10px;
+      padding: 10px 10px 10px 10px;
       text-align: center;
+      width: 100%;
   
       .frontend {
         grid-row: 1;

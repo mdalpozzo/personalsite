@@ -76,13 +76,16 @@ table {
 
 /* navbar */
 a {
-  color: #4C9CF1;
+  color: #b69f88;
   text-decoration: none;
   font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
 }
 
 a:hover {
-  color: #444;
+  color: #e88224;
+  text-decoration: none;
 }
 
 .navbar-container {
@@ -90,6 +93,7 @@ a:hover {
   width: 100%;
   min-height: 70px;
   color: #b69f88;
+  overflow: visible;
   box-shadow: 0 1px 2px 0px black;
   z-index: 1;
   text-align: center;
@@ -159,6 +163,7 @@ ul li {
 }
 .button:hover {
   opacity: 1;
+  cursor: pointer;
 }
 .open .button {
   opacity: 1;
@@ -431,11 +436,18 @@ ul.menu li:hover:after {
   /* Styles */
 }
 /* Desktops and laptops ----------- */
-@media only screen and (min-width: 1140px) {
+@media only screen and (min-width: 1200px) {
   .skill-section {
     box-shadow: inset 0 0 5px #000000;
   }
 
+  nav:before {
+    all: unset;
+  }
+
+  .landing {
+    width: 100%;
+  }
   .landing #banner1-bg {
     height: 35rem;
     position: relative;
@@ -444,7 +456,7 @@ ul.menu li:hover:after {
     width: 60%;
     color: #e88224;
     display: inline-block;
-    margin-top: 10rem;
+    margin-top: 5rem;
     margin-left: 5rem;
   }
   .landing #banner1-bg .leads h1 {
@@ -466,8 +478,9 @@ ul.menu li:hover:after {
     min-height: 100%;
     grid-template-columns: 1fr 1fr 1fr;
     column-gap: 10px;
-    margin: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     text-align: center;
+    width: 100%;
   }
   .landing .attributes .frontend {
     grid-row: 1;
