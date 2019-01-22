@@ -19,6 +19,7 @@ class Landing extends Component {
         <div id="banner1-bg">
           <div className="leads">
             <h1>MARLIN DALPOZZO</h1>
+            <div className="line-break">_________________________________</div>
             <h2>Full-Stack Software Engineer</h2>
           </div>
           <img src="images/mar1trans.png" />

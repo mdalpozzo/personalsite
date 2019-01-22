@@ -336,15 +336,19 @@ ul.menu li:hover:after {
   width: 100%;
 }
 #banner1-bg .leads h1 {
-  font-family: "Archivo", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 26px;
   margin-top: 4rem;
+  margin-right: 5rem;
+}
+#banner1-bg .leads .line-break {
+  margin-right: 5rem;
 }
 #banner1-bg .leads h2 {
   font-family: "Arvo", serif;
   font-size: 18px;
-  text-decoration: underline overline;
-  margin-top: 4rem;
+  text-decoration: none;
+  margin-top: 3rem;
   margin-right: 10rem;
 }
 #banner1-bg img {
@@ -464,7 +468,9 @@ ul.menu li:hover:after {
   }
   .landing #banner1-bg .leads h2 {
     margin-top: 25px;
-    font-size: 50px;
+    margin-right: 0;
+    font-size: 40px;
+    text-align: center;
   }
   .landing #banner1-bg img {
     width: 600px;

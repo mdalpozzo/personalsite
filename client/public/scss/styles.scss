@@ -373,16 +373,21 @@ ul.menu {
     width: 100%;
 
     h1 {
-      font-family: 'Archivo', sans-serif;
+      font-family: 'Montserrat', sans-serif;
       font-size: 26px;
       margin-top: 4rem;
+      margin-right: 5rem;
+    }
+
+    .line-break {
+      margin-right: 5rem;
     }
 
     h2 {
       font-family: 'Arvo', serif;
       font-size: 18px;
-      text-decoration: underline overline;
-      margin-top: 4rem;
+      text-decoration: none;
+      margin-top: 3rem;
       margin-right: 10rem;
     }
   }
@@ -570,7 +575,9 @@ ul.menu {
   
         h2 {
           margin-top: 25px;
-          font-size: 50px;
+          margin-right: 0;
+          font-size: 40px;
+          text-align: center;
         }
       }
   
