@@ -3,19 +3,87 @@
    v2.0 | 20110126
    License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -25,8 +93,17 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -34,16 +111,20 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
-blockquote:before, blockquote:after,
-q:before, q:after {
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -61,392 +142,389 @@ table {
   text-align: center;
 }
 
-/* MOBILE FIRST (iphone5) ----------- */
-#app, html, body, .main-wrapper {
-  height: 100%;
-  width: 100%;
-  background-color: #fffafb;
-}
-
-/* to remove white space between navbar and landing divs */
+/* MOBILE FIRST ----------- */
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width: 320px) {
+  #app,
+html,
+body,
 .main-wrapper {
-  display: flex;
-  flex-direction: column;
-}
+    height: 100%;
+    width: 100%;
+    background-color: #fffafb;
+  }
 
-/* navbar */
-a {
-  color: #b69f88;
-  text-decoration: none;
-  font-weight: bold;
-  text-transform: uppercase;
-  font-size: 20px;
-}
+  /* to remove white space between navbar and landing divs */
+  .main-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 
-a:hover {
-  color: #e88224;
-  text-decoration: none;
-}
+  /* navbar */
+  a {
+    color: #b69f88;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 20px;
+  }
 
-.navbar-container {
-  background: #024666;
-  width: 100%;
-  min-height: 70px;
-  color: #b69f88;
-  overflow: visible;
-  box-shadow: 0 1px 2px 0px black;
-  z-index: 1;
-  text-align: center;
-}
-.navbar-container h1 {
-  font-size: 12px;
-  width: 50%;
-  margin: 9px 0 0 5px;
-  text-align: left;
-}
+  a:hover {
+    color: #e88224;
+    text-decoration: none;
+  }
 
-ul {
-  list-style: none;
-}
+  .navbar-container {
+    background: #024666;
+    width: 100%;
+    min-height: 70px;
+    color: #b69f88;
+    overflow: visible;
+    box-shadow: 0 1px 2px 0px black;
+    z-index: 1;
+    text-align: center;
+  }
+  .navbar-container h1 {
+    font-size: 12px;
+    width: 50%;
+    margin: 9px 0 0 5px;
+    text-align: left;
+  }
 
-ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-ul li {
-  cursor: pointer;
-  padding: 6px 20px;
-  font-size: 48px;
-}
+  ul {
+    list-style: none;
+  }
 
-.button {
-  opacity: 0.6;
-  background-color: transparent;
-  position: relative;
-  top: 5px;
-  z-index: 2;
-  border: none;
-  width: 60px;
-  height: 40px;
-  margin: 0 auto;
-  outline: none;
-  transition: opacity 0.1s ease-out;
-}
-.button:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  width: 100%;
-  background: linear-gradient(to bottom, transparent, transparent 7.5%, #98B296 7.5%, #98B296 22.5%, transparent 22.5%, transparent 37.5%, #98B296 37.5%, #98B296 52.5%, transparent 52.5%, transparent 67.5%, #98B296 67.5%, #98B296 82.5%, transparent 82.5%, transparent 100%);
-  clip-path: circle(50% at 50% 50%);
-  transition: opacity 0.1s ease-out, width 0.1s 0.1s ease-out;
-}
-.button:after {
-  opacity: 0;
-  content: "×";
-  color: white;
-  position: absolute;
-  top: 16px;
-  left: 8px;
-  font-family: Arial, sans-serif;
-  font-size: 76px;
-  line-height: 0;
-  transition: opacity 0.4s ease-out;
-}
-.button:active {
-  transform: translateY(2px);
-}
-.button:hover {
-  opacity: 1;
-  cursor: pointer;
-}
-.open .button {
-  opacity: 1;
-}
-.open .button:before {
-  opacity: 0;
-  width: 0;
-}
-.open .button:after {
-  opacity: 1;
-  transform: translate3d(0, 0, 0) rotate(360deg);
-  transition: transform 0.2s 0.2s ease-out, opacity 0.2s 0.2s ease-out;
-}
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  ul li {
+    cursor: pointer;
+    padding: 6px 20px;
+    font-size: 48px;
+  }
 
-nav {
-  z-index: 1;
-  position: fixed;
-  top: -100%;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: translate3d(0, 0, 0);
-  backface-visibility: hidden;
-  overflow: hidden;
-}
-nav:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  background: rgba(123, 156, 121, 0.98);
-  width: 100%;
-  height: 0;
-  padding-bottom: 100%;
-  border-radius: 100%;
-  transform: scale(0.04), translateY(9999px);
-  overflow: hidden;
-}
-.open nav {
-  top: 0;
-}
-.open nav:before {
-  animation: menu-animation 0.5s ease-out forwards;
-}
-
-ul.menu {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  backface-visibility: hidden;
-  perspective: 1000;
-  color: white;
-}
-ul.menu li {
-  opacity: 0;
-  text-align: center;
-  transform: translate3d(0, 36px, 0);
-}
-ul.menu li:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  left: auto;
-  background-color: white;
-  height: 100%;
-  width: 0;
-  overflow: hidden;
-  transition: width 0.8s ease-out;
-}
-ul.menu li:after {
-  opacity: 0;
-  content: attr(data-text);
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  color: #98B296;
-  overflow: hidden;
-  transform: translate(-24px, 6px);
-  transition: transform 0.1s ease-out, opacity 0.1s ease-out;
-}
-ul.menu li:hover:before {
-  left: 0;
-  right: auto;
-  width: 100%;
-}
-ul.menu li:hover:after {
-  opacity: 1;
-  padding: 0 20px;
-  transform: translate(0px, 6px);
-  transition: transform 0.2s 0.14s ease-out, opacity 0.2s 0.14s ease-out;
-}
-.open ul.menu li {
-  opacity: 1;
-  transform: translate3d(0, 0, 0);
-  transition: transform 0.2s ease-out, opacity 0.2s ease-out;
-}
-.open ul.menu li:nth-child(1) {
-  transition-delay: 0.15s;
-}
-.open ul.menu li:nth-child(2) {
-  transition-delay: 0.25s;
-}
-.open ul.menu li:nth-child(3) {
-  transition-delay: 0.35s;
-}
-.open ul.menu li:nth-child(4) {
-  transition-delay: 0.45s;
-}
-
-.landing {
-  transition: 0.2s ease-out;
-}
-.open .landing {
-  transform: scale(0.92);
-  transition: transform 0.2s 0.21s ease-out;
-}
-
-@keyframes menu-animation {
-  0% {
+  .button {
+    opacity: 0.6;
+    background-color: transparent;
+    position: relative;
+    top: 5px;
+    z-index: 2;
+    border: none;
+    width: 60px;
+    height: 40px;
+    margin: 0 auto;
+    outline: none;
+    transition: opacity 0.1s ease-out;
+  }
+  .button:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    width: 100%;
+    background: linear-gradient(to bottom, transparent, transparent 7.5%, #98b296 7.5%, #98b296 22.5%, transparent 22.5%, transparent 37.5%, #98b296 37.5%, #98b296 52.5%, transparent 52.5%, transparent 67.5%, #98b296 67.5%, #98b296 82.5%, transparent 82.5%, transparent 100%);
+    clip-path: circle(50% at 50% 50%);
+    transition: opacity 0.1s ease-out, width 0.1s 0.1s ease-out;
+  }
+  .button:after {
     opacity: 0;
-    transform: scale(0.04) translateY(300%);
+    content: "×";
+    color: white;
+    position: absolute;
+    top: 16px;
+    left: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 76px;
+    line-height: 0;
+    transition: opacity 0.4s ease-out;
   }
-  40% {
-    transform: scale(0.04) translateY(0);
-    transition: ease-out;
+  .button:active {
+    transform: translateY(2px);
   }
-  40% {
-    transform: scale(0.04) translateY(0);
-  }
-  60% {
+  .button:hover {
     opacity: 1;
-    transform: scale(0.02) translateY(0px);
+    cursor: pointer;
   }
-  61% {
-    transform: scale(0.04);
+  .open .button {
+    opacity: 1;
   }
-  99.9% {
+  .open .button:before {
+    opacity: 0;
+    width: 0;
+  }
+  .open .button:after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0) rotate(360deg);
+    transition: transform 0.2s 0.2s ease-out, opacity 0.2s 0.2s ease-out;
+  }
+
+  nav {
+    z-index: 1;
+    position: fixed;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    overflow: hidden;
+  }
+  nav:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: rgba(123, 156, 121, 0.98);
+    width: 100%;
     height: 0;
     padding-bottom: 100%;
     border-radius: 100%;
+    transform: scale(0.04), translateY(9999px);
+    overflow: hidden;
   }
-  100% {
-    transform: scale(2);
+  .open nav {
+    top: 0;
+  }
+  .open nav:before {
+    animation: menu-animation 0.5s ease-out forwards;
+  }
+
+  ul.menu {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+    backface-visibility: hidden;
+    perspective: 1000;
+    color: white;
+  }
+  ul.menu li {
+    opacity: 0;
+    text-align: center;
+    transform: translate3d(0, 36px, 0);
+  }
+  ul.menu li:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    left: auto;
+    background-color: white;
     height: 100%;
-    padding-bottom: 0;
-    border-radius: 0;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.8s ease-out;
+  }
+  ul.menu li:after {
+    opacity: 0;
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    color: #98b296;
+    overflow: hidden;
+    transform: translate(-24px, 6px);
+    transition: transform 0.1s ease-out, opacity 0.1s ease-out;
+  }
+  ul.menu li:hover:before {
+    left: 0;
+    right: auto;
+    width: 100%;
+  }
+  ul.menu li:hover:after {
+    opacity: 1;
+    padding: 0 20px;
+    transform: translate(0px, 6px);
+    transition: transform 0.2s 0.14s ease-out, opacity 0.2s 0.14s ease-out;
+  }
+  .open ul.menu li {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+  }
+  .open ul.menu li:nth-child(1) {
+    transition-delay: 0.15s;
+  }
+  .open ul.menu li:nth-child(2) {
+    transition-delay: 0.25s;
+  }
+  .open ul.menu li:nth-child(3) {
+    transition-delay: 0.35s;
+  }
+  .open ul.menu li:nth-child(4) {
+    transition-delay: 0.45s;
+  }
+
+  .landing {
+    transition: 0.2s ease-out;
+  }
+  .open .landing {
+    transform: scale(0.92);
+    transition: transform 0.2s 0.21s ease-out;
+  }
+
+  @keyframes menu-animation {
+    0% {
+      opacity: 0;
+      transform: scale(0.04) translateY(300%);
+    }
+    40% {
+      transform: scale(0.04) translateY(0);
+      transition: ease-out;
+    }
+    40% {
+      transform: scale(0.04) translateY(0);
+    }
+    60% {
+      opacity: 1;
+      transform: scale(0.02) translateY(0px);
+    }
+    61% {
+      transform: scale(0.04);
+    }
+    99.9% {
+      height: 0;
+      padding-bottom: 100%;
+      border-radius: 100%;
+    }
+    100% {
+      transform: scale(2);
+      height: 100%;
+      padding-bottom: 0;
+      border-radius: 0;
+    }
+  }
+  /* ---- */
+  #banner1-bg {
+    height: 20rem;
+    position: relative;
+    background-color: #016392;
+  }
+  #banner1-bg .leads {
+    color: #e88224;
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+  }
+  #banner1-bg .leads h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 26px;
+    margin-top: 4rem;
+    margin-right: 5rem;
+  }
+  #banner1-bg .leads .line-break {
+    margin-right: 5rem;
+  }
+  #banner1-bg .leads h2 {
+    font-family: "Arvo", serif;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 3rem;
+    margin-right: 10rem;
+  }
+  #banner1-bg img {
+    width: 15rem;
+    right: 0.01rem;
+    position: absolute;
+    display: inline-block;
+    bottom: 0;
+  }
+
+  .attributes .backend {
+    padding-bottom: 5px;
+  }
+  .attributes .tools h3 {
+    font-size: 20px;
+  }
+  .attributes h3 {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .skill-img {
+    height: 50px;
+    margin: auto;
+  }
+
+  .frontendstuff {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+  }
+  .frontendstuff .react {
+    grid-row: 1;
+  }
+  .frontendstuff .javascript {
+    grid-row: 1;
+  }
+  .frontendstuff .redux {
+    grid-row: 1;
+  }
+  .frontendstuff .html {
+    grid-row: 2;
+  }
+  .frontendstuff .css {
+    grid-row: 2;
+  }
+
+  .backendstuff {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+  }
+  .backendstuff .node {
+    grid-row: 1;
+  }
+  .backendstuff .mongo {
+    grid-row: 1;
+  }
+  .backendstuff .sql {
+    grid-row: 1;
+  }
+
+  .otherstuff {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px;
+  }
+  .otherstuff .git {
+    grid-row: 1;
+  }
+  .otherstuff .github {
+    grid-row: 1;
+  }
+  .otherstuff .docker {
+    grid-row: 1;
   }
 }
-/* ---- */
-#banner1-bg {
-  height: 20rem;
-  position: relative;
-  background-color: #016392;
-}
-#banner1-bg .leads {
-  color: #e88224;
-  display: inline-block;
-  text-align: center;
-  width: 100%;
-}
-#banner1-bg .leads h1 {
-  font-family: "Montserrat", sans-serif;
-  font-size: 26px;
-  margin-top: 4rem;
-  margin-right: 5rem;
-}
-#banner1-bg .leads .line-break {
-  margin-right: 5rem;
-}
-#banner1-bg .leads h2 {
-  font-family: "Arvo", serif;
-  font-size: 18px;
-  text-decoration: none;
-  margin-top: 3rem;
-  margin-right: 10rem;
-}
-#banner1-bg img {
-  width: 15rem;
-  right: 0.01rem;
-  position: absolute;
-  display: inline-block;
-  bottom: 0;
-}
-
-.attributes .backend {
-  padding-bottom: 5px;
-}
-.attributes .tools h3 {
-  font-size: 20px;
-}
-.attributes h3 {
-  text-align: center;
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.skill-img {
-  height: 50px;
-  margin: auto;
-}
-
-.frontendstuff {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px;
-}
-.frontendstuff .react {
-  grid-row: 1;
-}
-.frontendstuff .javascript {
-  grid-row: 1;
-}
-.frontendstuff .redux {
-  grid-row: 1;
-}
-.frontendstuff .html {
-  grid-row: 2;
-}
-.frontendstuff .css {
-  grid-row: 2;
-}
-
-.backendstuff {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px;
-}
-.backendstuff .node {
-  grid-row: 1;
-}
-.backendstuff .mongo {
-  grid-row: 1;
-}
-.backendstuff .sql {
-  grid-row: 1;
-}
-
-.otherstuff {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px;
-}
-.otherstuff .git {
-  grid-row: 1;
-}
-.otherstuff .github {
-  grid-row: 1;
-}
-.otherstuff .docker {
-  grid-row: 1;
-}
-
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   /* Styles */
 }
 /* Smartphones (landscape) ----------- */
-@media only screen and (min-width: 321px) {
-  /* Styles */
-}
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width: 320px) {
+@media only screen and (min-width: 320px) {
   /* Styles */
 }
 /* Desktops and laptops ----------- */
 @media only screen and (min-width: 1200px) {
   .skill-section {
     box-shadow: inset 0 0 5px #000000;
-  }
-
-  nav:before {
-    all: unset;
   }
 
   .landing {
