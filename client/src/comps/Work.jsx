@@ -20,13 +20,30 @@ class Work extends Component {
           </div>
         </div>
         <div className="project-tile">
-          <a href="http://tool-share-og.herokuapp.com/">Tool Share</a>
-          <p>A socially driven tool sharing application.</p>
+          <a href="https://tool-share-og.herokuapp.com/" target="_blank">
+            Tool Share
+          </a>
+          <p>A peer-to-peer tool sharing application.</p>
           <div className="specs">
             <p>Front-end: React/Redux</p>
             <p>Back-end: Node, Express, MongoDB</p>
           </div>
-          <img src="images/toolshare.png" />
+          <a href="https://tool-share-og.herokuapp.com/" target="_blank">
+            <img src="images/toolshare.png" />
+          </a>
+        </div>
+        <div className="project-tile">
+          <a href="https://communitynews88.herokuapp.com/" target="_blank">
+            Community News
+          </a>
+          <p>A socially driven, local news outlet and forum.</p>
+          <div className="specs">
+            <p>Front-end: React/Redux</p>
+            <p>Back-end: Node, Express, MongoDB</p>
+          </div>
+          <a href="https://communitynews88.herokuapp.com/" target="-blank">
+            <img src="images/communitynews.png" />
+          </a>
         </div>
       </div>
     );
