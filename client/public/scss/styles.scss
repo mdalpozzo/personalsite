@@ -199,7 +199,7 @@ body,
   color: map-get($colors, navbar-font);
   // border-bottom: 1px solid #000000;
   overflow: visible;
-  box-shadow: 0 1px 2px 0px rgb(19, 19, 19);
+  box-shadow: 0 .5px 20px .5px rgb(34, 34, 34);
   z-index: 1;
   text-align: center;
 
