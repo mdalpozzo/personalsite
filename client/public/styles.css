@@ -240,9 +240,10 @@ ul {
     position: relative;
     z-index: 2;
     border: none;
-    width: 60px;
-    height: 60px;
-    margin: 0 auto;
+    width: 50px;
+    height: 50px;
+    margin-right: 1rem;
+    float: right;
     outline: none;
     transition: opacity 0.1s ease-out;
   }
@@ -255,8 +256,9 @@ ul {
     left: 0;
     margin: auto;
     width: 100%;
-    background: linear-gradient(to bottom, transparent, transparent 7.5%, #d6b282 7.5%, #d6b282 22.5%, transparent 22.5%, transparent 37.5%, #d6b282 37.5%, #d6b282 52.5%, transparent 52.5%, transparent 67.5%, #d6b282 67.5%, #d6b282 82.5%, transparent 82.5%, transparent 100%);
-    clip-path: circle(50% at 50% 50%);
+    background-image: url("images/menuicon.png");
+    background-size: cover;
+    background-position: center;
   }
   .button:after {
     opacity: 0;
@@ -264,7 +266,7 @@ ul {
     color: white;
     position: absolute;
     top: 27px;
-    left: 8px;
+    left: 5px;
     font-family: Arial, sans-serif;
     font-size: 76px;
     line-height: 0;
@@ -431,13 +433,13 @@ ul {
 }
 @media (max-width: 500px) {
   .banner .leads h1 {
-    margin-right: 5rem;
-    margin-top: 2rem;
+    margin-right: 0;
+    margin-top: 2.5rem;
   }
 }
 @media (min-width: 500px) {
   .banner .leads h1 {
-    margin-top: 4rem;
+    margin-top: 5rem;
   }
 }
 @media (min-width: 1200px) {
@@ -469,6 +471,12 @@ ul {
   margin-top: 3rem;
   margin-right: 10rem;
 }
+@media (max-width: 500px) {
+  .banner .leads h2 {
+    margin-top: 4rem;
+    margin-right: 7rem;
+  }
+}
 @media (min-width: 500px) {
   .banner .leads h2 {
     margin-right: 0;
@@ -489,12 +497,14 @@ ul {
 @media (min-width: 500px) {
   .banner img {
     width: 20rem;
-    right: 2rem;
+    right: -1rem;
   }
 }
 @media (min-width: 700px) {
   .banner img {
     width: 25rem;
+    right: -1rem;
+    bottom: -4rem;
   }
 }
 @media (min-width: 1200px) {
@@ -591,6 +601,9 @@ ul {
 .frontendstuff .css {
   grid-row: 2;
 }
+.frontendstuff .sass {
+  grid-row: 2;
+}
 
 .backendstuff {
   display: grid;
@@ -606,6 +619,9 @@ ul {
 .backendstuff .sql {
   grid-row: 1;
 }
+.backendstuff .nginx {
+  grid-row: 2;
+}
 
 .otherstuff {
   display: grid;
@@ -620,6 +636,9 @@ ul {
 }
 .otherstuff .docker {
   grid-row: 1;
+}
+.otherstuff .heroku {
+  grid-row: 2;
 }
 
 /* CONTACT PAGE =========================== */
@@ -646,7 +665,7 @@ ul {
 .namebox {
   margin: 3rem auto 0 auto;
   background-color: #ffc7c7;
-  width: 20%;
+  width: 15rem;
 }
 
 /* ABOUT PAGE ====================== */

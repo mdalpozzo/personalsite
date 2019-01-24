@@ -44,6 +44,10 @@ class Landing extends Component {
                 <img className="skill-img" src="images/css.png" />
                 <p className="skill-info">CSS</p>
               </div>
+              <div className="sass skill-button">
+                <img className="skill-img" src="images/sass.png" />
+                <p className="skill-info">SASS</p>
+              </div>
             </div>
           </div>
           <div className="backend skill-section">
@@ -61,6 +65,10 @@ class Landing extends Component {
                 <img className="skill-img" src="images/sql.png" />
                 <p className="skill-info">SQL Databases</p>
               </div>
+              <div className="nginx skill-button">
+                <img className="skill-img" src="images/nginx.png" />
+                <p className="skill-info">nginx</p>
+              </div>
             </div>
           </div>
           <div className="tools skill-section">
@@ -77,6 +85,10 @@ class Landing extends Component {
               <div className="docker skill-button">
                 <img className="skill-img" src="images/docker.png" />
                 <p className="skill-info">Docker</p>
+              </div>
+              <div className="heroku skill-button">
+                <img className="skill-img" src="images/heroku.png" />
+                <p className="skill-info">Heroku</p>
               </div>
             </div>
           </div>
