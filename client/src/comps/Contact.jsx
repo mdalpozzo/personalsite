@@ -26,18 +26,18 @@ class Contact extends Component {
         </div>
         <div className="namebox social">
           <h6>Other Pages and Media</h6>
-          <div className="socialmediabox">
-            <a href="https://www.linkedin.com/in/marlin-dalpozzo/" target="_blank">
+          <a href="https://www.linkedin.com/in/marlin-dalpozzo/" target="_blank">
+            <div className="socialmediabox">
               <i class="fab fa-linkedin-in fa-2x" />
               <p>LinkedIn</p>
-            </a>
-          </div>
-          <div className="socialmediabox">
-            <a href="https://github.com/mdalpozzo" target="_blank">
+            </div>
+          </a>
+          <a href="https://github.com/mdalpozzo" target="_blank">
+            <div className="socialmediabox">
               <i class="fab fa-github fa-2x" />
               <p>GitHub</p>
-            </a>
-          </div>
+            </div>
+          </a>
         </div>
       </div>
     );

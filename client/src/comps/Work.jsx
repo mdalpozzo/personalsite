@@ -19,31 +19,29 @@ class Work extends Component {
             <h2> </h2>
           </div>
         </div>
-        <div className="project-tile">
-          <a href="https://tool-share-og.herokuapp.com/" target="_blank">
-            Tool Share
-          </a>
-          <p>A peer-to-peer tool sharing application.</p>
-          <div className="specs">
-            <p>Front-end: React/Redux</p>
-            <p>Back-end: Node, Express, MongoDB</p>
+        <div className="projects-container">
+          <div className="project-tile">
+            <a href="https://toolshare.marlindalpozzo.com" target="_blank">
+              <p className="project-title">Tool Share</p>
+              <p>A peer-to-peer tool sharing application.</p>
+              <div className="specs">
+                <p>Front-end: React/Redux</p>
+                <p>Back-end: Node, Express, MongoDB</p>
+              </div>
+              <img src="images/toolshare.png" />
+            </a>
           </div>
-          <a href="https://tool-share-og.herokuapp.com/" target="_blank">
-            <img src="images/toolshare.png" />
-          </a>
-        </div>
-        <div className="project-tile">
-          <a href="https://communitynews88.herokuapp.com/" target="_blank">
-            Community News
-          </a>
-          <p>A socially driven, local news outlet and forum.</p>
-          <div className="specs">
-            <p>Front-end: React/Redux</p>
-            <p>Back-end: Node, Express, MongoDB</p>
+          <div className="project-tile">
+            <a href="https://communitynews.marlindalpozzo.com" target="_blank">
+              <p className="project-title">Community News</p>
+              <p>A socially driven, local news outlet and forum.</p>
+              <div className="specs">
+                <p>Front-end: React/Redux</p>
+                <p>Back-end: Node, Express, MongoDB</p>
+              </div>
+              <img src="images/communitynews.png" />
+            </a>
           </div>
-          <a href="https://communitynews88.herokuapp.com/" target="-blank">
-            <img src="images/communitynews.png" />
-          </a>
         </div>
       </div>
     );
