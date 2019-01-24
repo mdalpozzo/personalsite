@@ -18,7 +18,7 @@ class Landing extends Component {
             <h1>MARLIN DALPOZZO</h1>
             <h2>Full-Stack Software Engineer</h2>
           </div>
-          <img src="images/mar1trans.png" />
+          <img src="images/mypic.png" />
         </div>
         <div className="attributes">
           <div className="frontend skill-section">

@@ -4,7 +4,7 @@ import { PropTypes } from 'prop-types';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
-class Landing extends Component {
+class NavBar extends Component {
   constructor() {
     super();
     this.state = {
@@ -61,7 +61,7 @@ class Landing extends Component {
   }
 }
 
-// Landing.propTypes = {
+// NavBar.propTypes = {
 //   getProfileByTool: PropTypes.func.isRequired,
 //   getAllLenders: PropTypes.func.isRequired,
 //   // errors: PropTypes.object.isRequired,
@@ -74,4 +74,4 @@ const mapStateToProps = state => ({});
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Landing);
+)(NavBar);
