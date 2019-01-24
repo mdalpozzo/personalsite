@@ -24,6 +24,21 @@ class Contact extends Component {
           <p>San Francisco, California</p>
           <p>marlin.dalpozzo@gmail.com</p>
         </div>
+        <div className="namebox social">
+          <h6>Other Pages and Media</h6>
+          <div className="socialmediabox">
+            <a href="https://www.linkedin.com/in/marlin-dalpozzo/" target="_blank">
+              <i class="fab fa-linkedin-in fa-2x" />
+              <p>LinkedIn</p>
+            </a>
+          </div>
+          <div className="socialmediabox">
+            <a href="https://github.com/mdalpozzo" target="_blank">
+              <i class="fab fa-github fa-2x" />
+              <p>GitHub</p>
+            </a>
+          </div>
+        </div>
       </div>
     );
   }
