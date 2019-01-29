@@ -39,7 +39,7 @@ class Work extends Component {
                 <p>Front-end: React/Redux</p>
                 <p>Back-end: Node, Express, MongoDB</p>
               </div>
-              <img src="images/communitynews.png" />
+              <img src="images/communitynews.jpg" />
             </a>
           </div>
         </div>
