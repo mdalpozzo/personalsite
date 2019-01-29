@@ -482,33 +482,64 @@ ul {
     margin-right: 0;
   }
 }
-.banner img {
+.banner .lowres {
   width: 15rem;
   position: absolute;
   display: inline-block;
   bottom: -3rem;
 }
 @media (max-width: 500px) {
-  .banner img {
+  .banner .lowres {
     width: 15rem;
     right: -1.2rem;
   }
 }
 @media (min-width: 500px) {
-  .banner img {
+  .banner .lowres {
     width: 20rem;
     right: -1rem;
   }
 }
 @media (min-width: 700px) {
-  .banner img {
+  .banner .lowres {
     width: 25rem;
     right: -1rem;
     bottom: -4rem;
   }
 }
 @media (min-width: 1200px) {
-  .banner img {
+  .banner .lowres {
+    width: 35rem;
+  }
+}
+.banner .highres {
+  width: 15rem;
+  position: absolute;
+  display: inline-block;
+  bottom: -3rem;
+  display: none;
+}
+@media (max-width: 500px) {
+  .banner .highres {
+    width: 15rem;
+    right: -1.2rem;
+  }
+}
+@media (min-width: 500px) {
+  .banner .highres {
+    width: 20rem;
+    right: -1rem;
+  }
+}
+@media (min-width: 700px) {
+  .banner .highres {
+    width: 25rem;
+    right: -1rem;
+    bottom: -4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .banner .highres {
     width: 35rem;
   }
 }

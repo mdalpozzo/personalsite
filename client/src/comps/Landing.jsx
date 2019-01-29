@@ -7,7 +7,20 @@ import { bindActionCreators } from 'redux';
 class Landing extends Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      mainpic: 'images/mypic_lowres.png',
+      highres: 'images/mypic.png',
+    };
+  }
+
+  componentWillMount() {
+    const highresimg = new Image();
+    highresimg.onload = () => {
+      this.setState({
+        mainpic: this.state.highres,
+      })
+    }
+    highresimg.src = this.state.highres;
   }
 
   render() {
@@ -18,7 +31,7 @@ class Landing extends Component {
             <h1>MARLIN DALPOZZO</h1>
             <h2>Full-Stack Software Engineer</h2>
           </div>
-          <img src="images/mypic.png" />
+          <img className="lowres" src={this.state.mainpic} />
         </div>
         <div className="attributes">
           <div className="frontend skill-section">
