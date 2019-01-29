@@ -28,7 +28,7 @@ class Work extends Component {
                 <p>Front-end: React/Redux</p>
                 <p>Back-end: Node, Express, MongoDB</p>
               </div>
-              <img src="images/toolshare.png" />
+              <img src="images/toolshare.jpg" />
             </a>
           </div>
           <div className="project-tile">
