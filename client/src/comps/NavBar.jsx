@@ -26,7 +26,7 @@ class NavBar extends Component {
         <div>
           <h1>
             <Link className="namelink" to="/">
-              MARLIN
+              MARLIN DALPOZZO
             </Link>
           </h1>
         </div>
