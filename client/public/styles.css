@@ -774,6 +774,11 @@ ul {
     bottom: -50rem;
   }
 }
+.about-container .aboutblurb {
+  width: 60rem;
+  margin: auto;
+  margin-bottom: 1rem;
+}
 
 /* WORK PAGE ====================== */
 .work-container {

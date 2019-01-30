@@ -200,7 +200,7 @@ body,
   color: map-get($colors, navbar-font);
   // border-bottom: 1px solid #000000;
   overflow: visible;
-  box-shadow: 0 .5px 20px .5px rgb(34, 34, 34);
+  box-shadow: 0 0.5px 20px 0.5px rgb(34, 34, 34);
   z-index: 1;
   text-align: center;
 
@@ -844,6 +844,12 @@ ul {
       bottom: -50rem;
     }
   }
+
+  .aboutblurb {
+    width: 60rem;
+    margin: auto;
+    margin-bottom: 1rem;
+  }
 }
 
 /* WORK PAGE ====================== */
@@ -903,7 +909,7 @@ ul {
   }
 
   .project-title {
-    font-size: 24px
+    font-size: 24px;
   }
 
   p {
