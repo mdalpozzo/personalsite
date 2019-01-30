@@ -51,7 +51,7 @@ class NavBar extends Component {
             </li>
             <li onClick={this.onClick}>
               <Link className="navlink" to="/contact">
-                Contact / Social Media
+                Contact
               </Link>
             </li>
           </ul>
