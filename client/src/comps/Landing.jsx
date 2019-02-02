@@ -18,8 +18,8 @@ class Landing extends Component {
     highresimg.onload = () => {
       this.setState({
         mainpic: this.state.highres,
-      })
-    }
+      });
+    };
     highresimg.src = this.state.highres;
   }
 
@@ -31,7 +31,7 @@ class Landing extends Component {
             <h1>MARLIN DALPOZZO</h1>
             <h2>Full-Stack Software Engineer</h2>
           </div>
-          <img className="lowres" src={this.state.mainpic} />
+          <img className="mainpic" src={this.state.mainpic} />
         </div>
         <div className="attributes">
           <div className="frontend skill-section">

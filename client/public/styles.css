@@ -425,11 +425,18 @@ ul {
 @media (min-width: 1200px) {
   .banner .leads {
     margin-top: 6rem;
+    padding-right: 20rem;
+  }
+}
+@media (min-width: 1800px) {
+  .banner .leads {
+    padding-right: 30rem;
   }
 }
 .banner .leads h1 {
   font-family: "Montserrat", sans-serif;
   font-size: 26px;
+  margin-top: 2.5rem;
 }
 @media (max-width: 500px) {
   .banner .leads h1 {
@@ -475,6 +482,7 @@ ul {
   .banner .leads h2 {
     margin-top: 4rem;
     margin-right: 7rem;
+    max-width: 15rem;
   }
 }
 @media (min-width: 500px) {
@@ -482,65 +490,40 @@ ul {
     margin-right: 0;
   }
 }
-.banner .lowres {
-  width: 15rem;
+.banner .mainpic {
   position: absolute;
   display: inline-block;
-  bottom: -3rem;
+  bottom: 0;
 }
 @media (max-width: 500px) {
-  .banner .lowres {
-    width: 15rem;
-    right: -1.2rem;
+  .banner .mainpic {
+    width: 16rem;
+    right: -1.5rem;
   }
 }
 @media (min-width: 500px) {
-  .banner .lowres {
-    width: 20rem;
-    right: -1rem;
+  .banner .mainpic {
+    width: 23rem;
+    right: -2rem;
   }
 }
-@media (min-width: 700px) {
-  .banner .lowres {
-    width: 25rem;
-    right: -1rem;
-    bottom: -4rem;
-  }
-}
-@media (min-width: 1200px) {
-  .banner .lowres {
-    width: 35rem;
-  }
-}
-.banner .highres {
-  width: 15rem;
-  position: absolute;
-  display: inline-block;
-  bottom: -3rem;
-  display: none;
-}
-@media (max-width: 500px) {
-  .banner .highres {
-    width: 15rem;
-    right: -1.2rem;
-  }
-}
-@media (min-width: 500px) {
-  .banner .highres {
-    width: 20rem;
-    right: -1rem;
-  }
-}
-@media (min-width: 700px) {
-  .banner .highres {
-    width: 25rem;
-    right: -1rem;
-    bottom: -4rem;
+@media (min-width: 800px) {
+  .banner .mainpic {
+    width: 30rem;
+    right: 0rem;
+    bottom: -4.5rem;
   }
 }
 @media (min-width: 1200px) {
-  .banner .highres {
-    width: 35rem;
+  .banner .mainpic {
+    width: 40rem;
+    right: 5rem;
+  }
+}
+@media (min-width: 1800px) {
+  .banner .mainpic {
+    width: 43rem;
+    right: 20rem;
   }
 }
 
@@ -553,7 +536,7 @@ ul {
   background-color: #eaf2ff;
   padding-bottom: 5px;
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .attributes .backend {
     background-color: #ffffff;
   }
@@ -561,13 +544,13 @@ ul {
 .attributes .tools {
   background-color: #ffeeda;
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .attributes .tools {
     background-color: #ffffff;
   }
 }
 
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .attributes {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -595,6 +578,7 @@ ul {
 }
 .skill-img {
   margin: auto;
+  height: 50px;
 }
 @media (max-width: 500px) {
   .skill-img {
@@ -606,7 +590,7 @@ ul {
     height: 35px;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .skill-img {
     height: 50px;
   }
@@ -700,7 +684,7 @@ ul {
   padding: 1rem 1rem;
   box-shadow: inset 0 0 5px #000000;
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .namebox {
     width: 25rem;
   }
@@ -738,7 +722,7 @@ ul {
   margin-top: 1rem;
   font-weight: 600;
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .about-container .leads h1 {
     margin-top: 13rem;
   }
@@ -759,7 +743,7 @@ ul {
     bottom: -7rem;
   }
 }
-@media (min-width: 700px) {
+@media (min-width: 800px) {
   .about-container img {
     bottom: -20rem;
   }
@@ -775,11 +759,30 @@ ul {
   }
 }
 .about-container .aboutblurb {
-  width: 60rem;
   margin: auto;
   margin-bottom: 1rem;
+  width: 60rem;
 }
-
+@media (max-width: 500px) {
+  .about-container .aboutblurb {
+    width: 75%;
+  }
+}
+@media (min-width: 500px) {
+  .about-container .aboutblurb {
+    width: 90%;
+  }
+}
+.about-container .tldr {
+  margin: auto;
+  margin-top: 2rem;
+  width: 470px;
+}
+@media (max-width: 500px) {
+  .about-container .tldr {
+    width: 100%;
+  }
+}
 /* WORK PAGE ====================== */
 .work-container {
   background-color: #b4d7ff;

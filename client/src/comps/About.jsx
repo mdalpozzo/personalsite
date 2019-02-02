@@ -34,20 +34,31 @@ class About extends Component {
           </div>
         </div>
         <div className="aboutblurb">
-          <p>
+          <p className="tldr">
             <b>tl;dr {'{'}</b>
             <br />
             <span style={{ paddingLeft: '20px', display: 'block' }}>
-              I am a Software Engineer experienced in building full-stack web applications. I
-              specialize in building responsive, dynamic UIs on the front-end. I often choose
-              React/Redux components to ensure modular, maintainable code. For building fast and
-              reliable back-end systems I usually work with an Express server on Node.js. For quick
-              or simple database needs, I'll use MongoDB. If more complex data modeling is required,
-              I would opt for a SQL database such as PostgreSQL.
+              <b>title:</b> 'Full-Stack Software Engineer',
+              <br />
+              <br />
+              <b>frontEnd:</b> 'I specialize in building responsive, dynamic UIs.'
+              <br />
+              <br />
+              <b>frontEndTechnology:</b> {'['} React, Redux, SASS, HTML, bootstrap {']'},
+              <br />
+              <br />
+              <b>backEnd:</b> 'I build fast, REST API servers',
+              <br />
+              <br />
+              <b>backEndTechnology:</b> {'['} Express, Node.js {']'},
+              <br />
+              <br />
+              <b>database:</b> {'['} MongoDB, PostgreSQL, SQL or noSQL {']'},
             </span>
             <b>{'}'}</b>
           </p>
           <p style={{ textIndent: '20px' }}>
+            I am a Full-Stack Software Engineer experienced in building full-stack web applications.
             I was born and raised in Santa Barbara, California. I moved to San Francisco in 2011
             after studying Geology and Computer Science at Sonoma State University. After playing in
             a rock band and making websites on the side I decided to turn full-time towards software

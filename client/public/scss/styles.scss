@@ -139,7 +139,7 @@ table {
   }
 }
 @mixin for-tablet-landscape-up {
-  @media (min-width: 700px) {
+  @media (min-width: 800px) {
     @content;
   }
 }
@@ -486,11 +486,17 @@ ul {
 
     @include for-desktop-up {
       margin-top: 6rem;
+      padding-right: 20rem;
+    }
+
+    @include for-big-desktop-up {
+      padding-right: 30rem;
     }
 
     h1 {
       font-family: 'Montserrat', sans-serif;
       font-size: 26px;
+      margin-top: 2.5rem;
       // text-shadow: 5px 5px 10px #555555;
 
       @include for-phone-only {
@@ -505,7 +511,7 @@ ul {
       @include for-desktop-up {
         font-size: 3rem;
       }
-
+      // underline
       &:after {
         content: '';
         display: block;
@@ -533,6 +539,7 @@ ul {
       @include for-phone-only {
         margin-top: 4rem;
         margin-right: 7rem;
+        max-width: 15rem;
       }
 
       @include for-tablet-portrait-up {
@@ -541,51 +548,31 @@ ul {
     }
   }
 
-  .lowres {
-    width: 15rem;
+  .mainpic {
     position: absolute;
     display: inline-block;
-    bottom: -3rem;
+    bottom: 0;
     @include for-phone-only {
-      width: 15rem;
-      right: -1.2rem;
+      width: 16rem;
+      right: -1.5rem;
     }
     @include for-tablet-portrait-up {
-      width: 20rem;
-      right: -1rem;
+      width: 23rem;
+      right: -2rem;
     }
     @include for-tablet-landscape-up {
-      width: 25rem;
-      right: -1rem;
-      bottom: -4rem;
+      width: 30rem;
+      right: 0rem;
+      bottom: -4.5rem;
     }
     @include for-desktop-up {
-      width: 35rem;
+      width: 40rem;
+      right: 5rem;
     }
-  }
-
-  .highres {
-    width: 15rem;
-    position: absolute;
-    display: inline-block;
-    bottom: -3rem;
-    @include for-phone-only {
-      width: 15rem;
-      right: -1.2rem;
+    @include for-big-desktop-up {
+      width: 43rem;
+      right: 20rem;
     }
-    @include for-tablet-portrait-up {
-      width: 20rem;
-      right: -1rem;
-    }
-    @include for-tablet-landscape-up {
-      width: 25rem;
-      right: -1rem;
-      bottom: -4rem;
-    }
-    @include for-desktop-up {
-      width: 35rem;
-    }
-    display: none;
   }
 }
 
@@ -648,6 +635,7 @@ ul {
 
 .skill-img {
   margin: auto;
+  height: 50px;
 
   @include for-phone-only {
     height: 50px;
@@ -846,9 +834,28 @@ ul {
   }
 
   .aboutblurb {
-    width: 60rem;
     margin: auto;
     margin-bottom: 1rem;
+    width: 60rem;
+    @include for-phone-only {
+      width: 75%;
+      // min-width: 20rem;
+    }
+    @include for-tablet-portrait-up {
+      width: 90%;
+    }
+  }
+
+  .tldr {
+    margin: auto;
+    margin-top: 2rem;
+    width: 470px;
+    @include for-phone-only {
+      width: 100%;
+    }
+    @include for-tablet-portrait-up {
+      // width: 100%;
+    }
   }
 }
 
