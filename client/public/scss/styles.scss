@@ -858,7 +858,7 @@ ul {
     display: block;
     margin: auto;
     @include for-phone-only {
-      width: 30rem;
+      width: 27rem;
       height: 20rem;
     }
     @include for-tablet-portrait-up {
