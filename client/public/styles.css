@@ -683,6 +683,9 @@ ul {
   width: 20rem;
   padding: 1rem 1rem;
   box-shadow: inset 0 0 5px #000000;
+  font-family: "Overpass", sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
 }
 @media (min-width: 800px) {
   .namebox {
@@ -727,41 +730,43 @@ ul {
     margin-top: 13rem;
   }
 }
-.about-container img {
+.about-container .about-mainpic {
   position: absolute;
   width: 100%;
   left: 0;
 }
 @media (max-width: 500px) {
-  .about-container img {
+  .about-container .about-mainpic {
     min-width: 380px;
     bottom: -2rem;
   }
 }
 @media (min-width: 500px) {
-  .about-container img {
+  .about-container .about-mainpic {
     bottom: -7rem;
   }
 }
 @media (min-width: 800px) {
-  .about-container img {
+  .about-container .about-mainpic {
     bottom: -20rem;
   }
 }
 @media (min-width: 1200px) {
-  .about-container img {
+  .about-container .about-mainpic {
     bottom: -30rem;
   }
 }
 @media (min-width: 1800px) {
-  .about-container img {
+  .about-container .about-mainpic {
     bottom: -50rem;
   }
 }
 .about-container .aboutblurb {
   margin: auto;
   margin-bottom: 1rem;
-  width: 60rem;
+  width: 80rem;
+  font-family: "Overpass", sans-serif;
+  font-size: 2rem;
 }
 @media (max-width: 500px) {
   .about-container .aboutblurb {
@@ -770,19 +775,26 @@ ul {
 }
 @media (min-width: 500px) {
   .about-container .aboutblurb {
-    width: 90%;
+    width: 70rem;
   }
 }
 .about-container .tldr {
+  width: 90%;
+  max-width: 70rem;
+  height: 35rem;
+  display: block;
   margin: auto;
-  margin-top: 2rem;
-  width: 470px;
 }
 @media (max-width: 500px) {
   .about-container .tldr {
-    width: 100%;
+    width: 30rem;
+    height: 20rem;
   }
 }
+.about-container .aboutbody {
+  margin: 0;
+}
+
 /* WORK PAGE ====================== */
 .work-container {
   background-color: #b4d7ff;

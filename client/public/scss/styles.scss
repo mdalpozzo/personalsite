@@ -756,6 +756,9 @@ ul {
   width: 20rem;
   padding: 1rem 1rem;
   box-shadow: inset 0 0 5px #000000;
+  font-family: 'Overpass', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
 
   @include for-tablet-landscape-up {
     width: 25rem;
@@ -806,7 +809,7 @@ ul {
     }
   }
 
-  img {
+  .about-mainpic {
     position: absolute;
     width: 100%;
     left: 0;
@@ -836,26 +839,35 @@ ul {
   .aboutblurb {
     margin: auto;
     margin-bottom: 1rem;
-    width: 60rem;
+    width: 80rem;
+    font-family: 'Overpass', sans-serif;
+    font-size: 2rem;
     @include for-phone-only {
       width: 75%;
       // min-width: 20rem;
     }
     @include for-tablet-portrait-up {
-      width: 90%;
+      width: 70rem;
     }
   }
 
   .tldr {
+    width: 90%;
+    max-width: 70rem;
+    height: 35rem;
+    display: block;
     margin: auto;
-    margin-top: 2rem;
-    width: 470px;
     @include for-phone-only {
-      width: 100%;
+      width: 30rem;
+      height: 20rem;
     }
     @include for-tablet-portrait-up {
       // width: 100%;
     }
+  }
+
+  .aboutbody {
+    margin: 0;
   }
 }
 

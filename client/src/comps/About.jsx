@@ -27,45 +27,23 @@ class About extends Component {
     return (
       <div className="about-container">
         <div className="banner">
-          <img src={this.state.mainpic} />
+          <img className="about-mainpic" src={this.state.mainpic} />
           <div className="leads">
             <h1>Software engineer, songwriter, adventurer</h1>
             <h2> </h2>
           </div>
         </div>
+        <img className="tldr" src="images/tldr-light.png" alt="tldr code" />
         <div className="aboutblurb">
-          <p className="tldr">
-            <b>tl;dr {'{'}</b>
-            <br />
-            <span style={{ paddingLeft: '20px', display: 'block' }}>
-              <b>title:</b> 'Full-Stack Software Engineer',
-              <br />
-              <br />
-              <b>frontEnd:</b> 'I specialize in building responsive, dynamic UIs.'
-              <br />
-              <br />
-              <b>frontEndTechnology:</b> {'['} React, Redux, SASS, HTML, bootstrap {']'},
-              <br />
-              <br />
-              <b>backEnd:</b> 'I build fast, REST API servers',
-              <br />
-              <br />
-              <b>backEndTechnology:</b> {'['} Express, Node.js {']'},
-              <br />
-              <br />
-              <b>database:</b> {'['} MongoDB, PostgreSQL, SQL or noSQL {']'},
-            </span>
-            <b>{'}'}</b>
-          </p>
-          <p style={{ textIndent: '20px' }}>
+          <p className="aboutbody" style={{ textIndent: '20px' }}>
             I am a Full-Stack Software Engineer experienced in building full-stack web applications.
             I was born and raised in Santa Barbara, California. I moved to San Francisco in 2011
-            after studying Geology and Computer Science at Sonoma State University. After playing in
-            a rock band and making websites on the side I decided to turn full-time towards software
-            engineering. Eventually, in 2018 I completed the Hack Reactor Full-stack Engineering
-            Immersive bootcamp, sharpening my engineering toolset. I spent several months teaching
-            JavaScript fundamentals and React before deciding to pursue a more active engineering
-            career.
+            after receiving a Bachelors in Geology, with a Minor in Paleontology, and Music
+            Composition at Sonoma State University. After playing in a rock band and making websites
+            on the side I decided to turn full-time towards software engineering. Eventually, in
+            2018 I completed the Hack Reactor Full-stack Engineering Immersive bootcamp, sharpening
+            my engineering toolset. I spent several months teaching JavaScript fundamentals and
+            React before deciding to pursue a more active engineering career.
             <br />
             <br />
             I currently freelance building web sites and web applications.
