@@ -21,6 +21,17 @@ class Work extends Component {
         </div>
         <div className="projects-container">
           <div className="project-tile">
+            <a href="https://bookbands.marlindalpozzo.com" target="_blank">
+              <p className="project-title">BookBand</p>
+              <p>A gig sharing application for musicians and performers</p>
+              <div className="specs">
+                <p>Front-end: React/Redux</p>
+                <p>Back-end: Node, Express, MongoDB</p>
+              </div>
+              <img src="images/bookband.png" />
+            </a>
+          </div>
+          <div className="project-tile">
             <a href="https://toolshare.marlindalpozzo.com" target="_blank">
               <p className="project-title">Tool Share</p>
               <p>A peer-to-peer tool sharing application.</p>
