@@ -10,7 +10,6 @@
     "start-dev": "nodemon server.js",
     "build": "cd client && webpack",
     "build-dev": "cd client && webpack --watch",
-    "seed": "node database/seed.js",
     "client-install": "cd client && yarn install",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run build-dev\" \"npm run start-dev\"",
