@@ -778,17 +778,25 @@ ul {
     width: 70rem;
   }
 }
+@media (max-width: 500px) {
+  .about-container .tldr-container {
+    width: 100%;
+    overflow: hidden;
+  }
+}
 .about-container .tldr {
   width: 90%;
   max-width: 70rem;
   height: 35rem;
   display: block;
+  position: relative;
   margin: auto;
 }
 @media (max-width: 500px) {
   .about-container .tldr {
-    width: 30rem;
+    width: 26rem;
     height: 20rem;
+    left: -20px;
   }
 }
 .about-container .aboutbody {

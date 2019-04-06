@@ -851,15 +851,24 @@ ul {
     }
   }
 
+  .tldr-container {
+    @include for-phone-only {
+      width: 100%;
+      overflow: hidden;
+    }
+  }
+
   .tldr {
     width: 90%;
     max-width: 70rem;
     height: 35rem;
     display: block;
+    position: relative;
     margin: auto;
     @include for-phone-only {
-      width: 27rem;
+      width: 26rem;
       height: 20rem;
+      left: -20px;
     }
     @include for-tablet-portrait-up {
       // width: 100%;

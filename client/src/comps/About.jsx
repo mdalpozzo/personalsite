@@ -33,7 +33,9 @@ class About extends Component {
             <h2> </h2>
           </div>
         </div>
-        <img className="tldr" src="images/tldr-light.png" alt="tldr code" />
+        <div className="tldr-container">
+          <img className="tldr" src="images/tldr-light.png" alt="tldr code" />
+        </div>
         <div className="aboutblurb">
           <p className="aboutbody" style={{ textIndent: '20px' }}>
             I am a Full-Stack Software Engineer experienced in building full-stack web applications.
