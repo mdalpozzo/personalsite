@@ -11,6 +11,7 @@ import NavBar from './comps/NavBar.jsx';
 import About from './comps/About.jsx';
 import Work from './comps/Work.jsx';
 import Contact from './comps/Contact.jsx';
+import Resume from './comps/Resume.jsx';
 
 import * as actions from './actions/actions';
 import store from './store/store';
@@ -29,6 +30,7 @@ class App extends React.Component {
           <Route exact path="/about" component={About} />
           <Route exact path="/work" component={Work} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/resume" component={Resume} />
         </div>
       </Router>
     );

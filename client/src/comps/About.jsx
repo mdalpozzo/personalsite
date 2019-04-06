@@ -37,7 +37,7 @@ class About extends Component {
           <img className="tldr" src="images/tldr-light.png" alt="tldr code" />
         </div>
         <div className="aboutblurb">
-          <p className="aboutbody" style={{ textIndent: '20px' }}>
+          <p className="aboutbody">
             I am a Full-Stack Software Engineer experienced in building full-stack web applications.
             I was born and raised in Santa Barbara, California. I moved to San Francisco in 2011
             after receiving a Bachelors in Geology, with a Minor in Paleontology, and Music

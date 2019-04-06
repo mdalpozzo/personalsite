@@ -50,6 +50,11 @@ class NavBar extends Component {
               </Link>
             </li>
             <li onClick={this.onClick}>
+              <Link className="navlink" to="/resume">
+                Resume
+              </Link>
+            </li>
+            <li onClick={this.onClick}>
               <Link className="navlink" to="/contact">
                 Contact
               </Link>

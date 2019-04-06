@@ -724,6 +724,45 @@ ul {
   }
 }
 
+/* RESUME PAGE ============================ */
+.resume-container {
+  text-align: center;
+
+  h4 {
+    border-bottom: 1px solid black;
+  }
+
+  .banner {
+    height: 8rem;
+  }
+
+  .leads {
+    padding: 0;
+    margin-top: 1rem;
+
+    h1 {
+      margin-top: 0;
+    }
+  }
+
+  .resume-section {
+    text-align: center;
+    width: 75%;
+    margin: 1rem auto;
+  }
+
+  .resume-item {
+    margin: 10px 0 10px 0;
+  }
+
+  .resume-desc {
+    text-align: left;
+    p {
+      margin: 0;
+    }
+  }
+}
+
 /* CONTACT PAGE =========================== */
 
 .contact-container {
@@ -845,6 +884,7 @@ ul {
     @include for-phone-only {
       width: 75%;
       // min-width: 20rem;
+      font-size: 1rem;
     }
     @include for-tablet-portrait-up {
       width: 70rem;

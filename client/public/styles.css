@@ -656,6 +656,38 @@ ul {
   grid-row: 2;
 }
 
+/* RESUME PAGE ============================ */
+.resume-container {
+  text-align: center;
+}
+.resume-container h4 {
+  border-bottom: 1px solid black;
+}
+.resume-container .banner {
+  height: 8rem;
+}
+.resume-container .leads {
+  padding: 0;
+  margin-top: 1rem;
+}
+.resume-container .leads h1 {
+  margin-top: 0;
+}
+.resume-container .resume-section {
+  text-align: center;
+  width: 75%;
+  margin: 1rem auto;
+}
+.resume-container .resume-item {
+  margin: 10px 0 10px 0;
+}
+.resume-container .resume-desc {
+  text-align: left;
+}
+.resume-container .resume-desc p {
+  margin: 0;
+}
+
 /* CONTACT PAGE =========================== */
 .contact-container {
   text-align: center;
@@ -771,6 +803,7 @@ ul {
 @media (max-width: 500px) {
   .about-container .aboutblurb {
     width: 75%;
+    font-size: 1rem;
   }
 }
 @media (min-width: 500px) {
