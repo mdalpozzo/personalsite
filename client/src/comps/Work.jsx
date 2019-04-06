@@ -22,33 +22,39 @@ class Work extends Component {
         <div className="projects-container">
           <div className="project-tile">
             <a href="https://bookbands.marlindalpozzo.com" target="_blank">
-              <p className="project-title">BookBand</p>
-              <p>A gig sharing application for musicians and performers</p>
-              <div className="specs">
-                <p>Front-end: React/Redux</p>
-                <p>Back-end: Node, Express, MongoDB</p>
+              <div className="project-blurb">
+                <p className="project-title">BookBand</p>
+                <p>A gig sharing application for musicians and performers</p>
+                <div className="specs">
+                  <p>Front-end: React/Redux</p>
+                  <p>Back-end: Node, Express, MongoDB</p>
+                </div>
               </div>
               <img src="images/bookband.png" />
             </a>
           </div>
           <div className="project-tile">
             <a href="https://toolshare.marlindalpozzo.com" target="_blank">
-              <p className="project-title">Tool Share</p>
-              <p>A peer-to-peer tool sharing application.</p>
-              <div className="specs">
-                <p>Front-end: React/Redux</p>
-                <p>Back-end: Node, Express, MongoDB</p>
+              <div className="project-blurb">
+                <p className="project-title">Tool Share</p>
+                <p>A peer-to-peer tool sharing application.</p>
+                <div className="specs">
+                  <p>Front-end: React/Redux</p>
+                  <p>Back-end: Node, Express, MongoDB</p>
+                </div>
               </div>
               <img src="images/toolshare.jpg" />
             </a>
           </div>
           <div className="project-tile">
             <a href="https://communitynews.marlindalpozzo.com" target="_blank">
-              <p className="project-title">Community News</p>
-              <p>A socially driven, local news outlet and forum.</p>
-              <div className="specs">
-                <p>Front-end: React/Redux</p>
-                <p>Back-end: Node, Express, MongoDB</p>
+              <div className="project-blurb">
+                <p className="project-title">Community News</p>
+                <p>A socially driven, local news outlet and forum.</p>
+                <div className="specs">
+                  <p>Front-end: React/Redux</p>
+                  <p>Back-end: Node, Express, MongoDB</p>
+                </div>
               </div>
               <img src="images/communitynews.jpg" />
             </a>

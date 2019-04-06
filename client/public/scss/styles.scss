@@ -953,9 +953,9 @@ ul {
     margin: 5rem 2.5rem;
   }
 
-  background-color: #ffffff;
+  // background-color: #c0984f;
   padding: 1rem 0 3rem 0;
-  box-shadow: inset 0 0 5px #000000;
+  // box-shadow: inset 0 0 5px #000000;
 
   .specs {
     text-align: left;
@@ -972,8 +972,14 @@ ul {
     }
   }
 
+  .project-blurb {
+    border-bottom: 1px solid black;
+    width: 75%;
+    margin: auto;
+  }
+
   &:hover {
-    background-color: #fff0fd;
+    // background-color: #d6ba85;
   }
 
   .project-title {
